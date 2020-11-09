@@ -1,15 +1,20 @@
 fileFormatVersion: 2
 guid: 24f22b038d584445ba4f43344cc5733d
 ScriptedImporter:
-  fileIDToRecycleName:
-    4900000: Strings
-    11400000: Program
+  internalIDToNameTable:
+  - first:
+      49: 4900000
+    second: Strings
+  - first:
+      114: 11400000
+    second: Program
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: en-AU
+  baseLanguageID: en-GB
   stringIDs:
   - line:5837f2
   - line:ship9
@@ -23,10 +28,17 @@ ScriptedImporter:
   - line:ship5
   - line:ship6
   - line:ship7
+  - line:0652887
+  - line:0a18aa1
+  - line:0cc7ce1
+  - line:00bc835
+  - line:092cdcd
+  - line:06574a4
+  - line:098749d
   compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
   baseLanguage: {fileID: 4900000, guid: 24f22b038d584445ba4f43344cc5733d, type: 3}
   localizations:
-  - languageName: de
-    text: {fileID: 4900000, guid: c7ccc37b05d57b5449cdae7c315d1646, type: 3}
+  - languageName: gd
+    text: {fileID: 4900000, guid: cc8a2df3fc7770943a5359b9e02983c2, type: 3}

@@ -32,12 +32,13 @@ position: 721,-190
     <<setsprite ShipFace neutral>>
 <<endif>>
 
-Ship: Anything else I can help with?
+Ship: Anything else I can help with? #line:0652887
 
--> No, thanks.
-    Ship: Aw, ok!
--> I'm good.
-    Ship: Let me know!
+-> No, thanks. #line:0a18aa1
+    Ship: Aw, ok! #line:092cdcd
+-> I'm good. #line:0cc7ce1
+    Ship: Let me know! #line:06574a4
+-> are you tho? #line:00bc835
 
-Ship: Bye!
+Ship: Bye! #line:098749d
 ===

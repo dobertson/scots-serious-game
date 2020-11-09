@@ -25,42 +25,28 @@ SOFTWARE.
 */
 
 using UnityEngine;
-using System.Collections;
 
 namespace Yarn.Unity.Example {
+    /// attached to the non-player characters, and stores the name of the Yarn
+    /// node that should be run when you talk to them.
 
-    /// Control the position of the camera and its behaviour
-    /** Camera should have minPosition and maxPosition of the
-     * same because we're dealing with 2D. The movement speed
-     * shouldn't be too fast nor too slow
-     */
-    public class CameraFollow : MonoBehaviour {
+    public class NPC : MonoBehaviour {
 
-        /// Target of the camera
-        public Transform target;
+        public string characterName = "";
 
-        /// Minimum position of camera
-        public float minPosition = -5.3f;
+        public string talkToNode = "";
 
-        /// Maximum position of camera
-        public float maxPosition = 5.3f;
+        [Header("Optional")]
+        public YarnProgram scriptToLoad;
 
-        /// Movement speed of camera
-        public float moveSpeed = 1.0f;
-
-        // Update is called once per frame
-        void Update () {
-            if (target == null) {
-                return;
+        void Start () {
+            if (scriptToLoad != null) {
+                DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+                dialogueRunner.Add(scriptToLoad);                
             }
-            var newPosition = Vector3.Lerp(transform.position, target.position, moveSpeed * Time.deltaTime);
 
-            newPosition.x = Mathf.Clamp(newPosition.x, minPosition, maxPosition);
-            newPosition.y = transform.position.y;
-            newPosition.z = transform.position.z;
-
-            transform.position = newPosition;
+            //GetComponent<DialogueUI>().onLineUpdate = 
         }
     }
-}
 
+}
