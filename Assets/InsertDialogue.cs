@@ -1,20 +1,30 @@
 ﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InsertDialogue : MonoBehaviour
 {
     public Transform textArea;
     public TextMeshProUGUI text;
 
-    public void Test(string line)
+    public void CreateText(string line)
     {
         string[] splittedParams = line.Split('@');
-        Debug.Log(splittedParams[0]);
-        Debug.Log(splittedParams[1]);
-        Debug.Log(FindObjectOfType<DialogueTranslated>().Get(splittedParams[0]));
 
         var newText = Instantiate(text, textArea);
-        newText.text = splittedParams[1];
-        newText.transform.SetSiblingIndex(textArea.transform.childCount-2);
+        newText.GetComponent<DialogueText>().SetValues(
+            splittedParams[0],
+            splittedParams[1],
+            FindObjectOfType<DialogueTranslated>().Get(splittedParams[0]));
+
+        FindObjectOfType<Scrollbar>().value = 0;
+    }
+
+    public void ClearText()
+    {
+        for (int i = 0; i < textArea.transform.childCount - 1; i++)
+        {
+            Destroy(textArea.GetChild(i).gameObject);
+        }
     }
 }
