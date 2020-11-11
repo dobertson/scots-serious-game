@@ -41,11 +41,14 @@ namespace Yarn.Unity.Example {
 
         void Start () {
             if (scriptToLoad != null) {
+                // add script to dialgoue runner
                 DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-                dialogueRunner.Add(scriptToLoad);                
-            }
+                dialogueRunner.Add(scriptToLoad);
 
-            //GetComponent<DialogueUI>().onLineUpdate = 
+                // add translated script to dialgue 
+                DialogueTranslated dialogueTranslated = FindObjectOfType<DialogueTranslated>();
+                dialogueTranslated.Add(scriptToLoad.localizations[0].text);
+             }
         }
     }
 
