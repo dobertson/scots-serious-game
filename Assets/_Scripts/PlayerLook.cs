@@ -11,10 +11,15 @@ public class PlayerLook : MonoBehaviour
 
     private float xAxisClamp;
 
-    private void Start()
+    private void OnEnable()
     {
         LockCursor();
         xAxisClamp = 0.0f;
+    }
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void LockCursor()

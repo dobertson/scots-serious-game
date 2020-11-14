@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DialogueRunner
   - DialogueRunnerTranslated
+  - NoteText
+  - NPC
   layers:
   - Default
   - TransparentFX

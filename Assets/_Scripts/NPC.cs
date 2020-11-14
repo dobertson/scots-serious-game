@@ -50,6 +50,15 @@ namespace Yarn.Unity.Example {
                 dialogueTranslated.Add(scriptToLoad.localizations[0].text);
              }
         }
+
+        private void OnMouseDown()
+        {
+            if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+            {
+                GameManager.Instance.DisablePlayerMovement();
+                FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
+            }
+        }
     }
 
 }
