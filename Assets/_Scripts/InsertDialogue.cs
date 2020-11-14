@@ -10,7 +10,7 @@ public class InsertDialogue : MonoBehaviour
     public void CreateText(string line)
     {
         string[] splittedParams = line.Split('@');
-
+        Debug.Log(splittedParams);
         var newText = Instantiate(text, textArea);
         newText.GetComponent<DialogueText>().SetValues(
             splittedParams[0],

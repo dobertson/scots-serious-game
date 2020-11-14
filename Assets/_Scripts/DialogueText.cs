@@ -23,13 +23,11 @@ public class DialogueText : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void ShowTranslation()
     {
         FindObjectOfType<HoverTextTranslation>().SetText(translatedText);
-        Debug.Log("show");
     }
 
     public void HideTranslation()
     {
         FindObjectOfType<HoverTextTranslation>().HideText();
-        Debug.Log("hide");
     }
 
     public void OnPointerEnter(PointerEventData eventData)
