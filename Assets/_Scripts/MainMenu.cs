@@ -7,15 +7,24 @@ public class MainMenu : MonoBehaviour
 
     public void Awake()
     {
-        mainMenu.SetActive(true);
+        if(GameManager.Instance.gameState == GameState.MAIN_MENU)
+        {
+            mainMenu.SetActive(true);
+            GameManager.Instance.DisablePlayerMovement();
+        }
+        else
+        {
+            mainMenu.SetActive(false);
+            GameManager.Instance.EnablePlayerMovement();
+        }
+
         controlsWindow.SetActive(false);
-        GameManager.Instance.DisablePlayerMovement();
     }
 
     public void EnterBuilding()
     {
         FindObjectOfType<MainMenuDoor>().OpenDoor();
-        GameManager.Instance.gameState = GameState.EnteredBuilding;
+        GameManager.Instance.gameState = GameState.SCENE_0;
         GameManager.Instance.EnablePlayerMovement();
         gameObject.SetActive(false);
     }

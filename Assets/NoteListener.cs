@@ -14,6 +14,7 @@ public class NoteListener : MonoBehaviour
     void Awake()
     {
         del = FindObjectOfType<NoteDelegate>();
+        noteContainer.SetActive(true);
         myText = GameObject.FindGameObjectWithTag("NoteText").GetComponent<TextMeshProUGUI>();
         noteContainer.SetActive(false);
     }

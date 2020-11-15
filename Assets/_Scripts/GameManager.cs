@@ -5,19 +5,21 @@ using UnityEngine.SceneManagement;
 
 public enum GameState
 {
-    MainMenu,
-    EnteredBuilding,
-    FinishedScene1,
-    FinishedScene2,
-    FinishedScene3,
-    FinishedScene4,
-    FinishedScene5,
-    FinishedScene6
+    MAIN_MENU = -1,
+    SCENE_0 = 0,
+    SCENE_1 = 1,
+    SCENE_2 = 2,
+    SCENE_3 = 3,
+    SCENE_4 = 4,
+    SCENE_5 = 5
 }
 
 public class GameManager : MonoBehaviour
 {
+    public bool fromTheBeginning;
     public GameState gameState;
+    public Transform playerStartingPosition;
+    public List<Transform> playerStatePositions;
     public float maxDistanceInteract;
     private static GameManager _instance;
 
@@ -25,8 +27,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        gameState = GameState.MainMenu;
-
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -34,6 +34,29 @@ public class GameManager : MonoBehaviour
         else
         {
             _instance = this;
+        }
+    }
+
+    private void Start()
+    {
+        if (fromTheBeginning)
+        {
+            gameState = GameState.MAIN_MENU;
+        }
+
+        SetupState();
+    }
+
+    void SetupState()
+    {
+        Debug.Log($"Game State: {gameState}");
+        if (gameState != GameState.MAIN_MENU)
+        {
+            FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)gameState].position;
+        }
+        else
+        {
+            FindObjectOfType<PlayerMove>().transform.position = playerStartingPosition.position;
         }
     }
 
