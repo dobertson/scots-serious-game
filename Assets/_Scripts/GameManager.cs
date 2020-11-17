@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 {
     public bool fromTheBeginning;
     public GameState gameState;
-    public Transform playerStartingPosition;
+    public Transform mainMenuPosition;
     public List<Transform> playerStatePositions;
     public float maxDistanceInteract;
     private static GameManager _instance;
@@ -53,10 +53,13 @@ public class GameManager : MonoBehaviour
         if (gameState != GameState.MAIN_MENU)
         {
             FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)gameState].position;
+            FindObjectOfType<PlayerMove>().transform.forward = playerStatePositions[(int)gameState].forward;
+
         }
         else
         {
-            FindObjectOfType<PlayerMove>().transform.position = playerStartingPosition.position;
+            FindObjectOfType<PlayerMove>().transform.position = mainMenuPosition.position;
+            FindObjectOfType<PlayerMove>().transform.forward = mainMenuPosition.forward;
         }
     }
 
