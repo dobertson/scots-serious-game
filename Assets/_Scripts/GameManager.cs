@@ -49,17 +49,21 @@ public class GameManager : MonoBehaviour
 
     void SetupState()
     {
-        Debug.Log($"Game State: {gameState}");
-        if (gameState != GameState.MAIN_MENU)
+        Debug.Log(SceneManager.GetActiveScene());
+        if (SceneManager.GetActiveScene().name.Equals("0_TenementClose"))
         {
-            FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)gameState].position;
-            FindObjectOfType<PlayerMove>().transform.forward = playerStatePositions[(int)gameState].forward;
+            Debug.Log($"Game State: {gameState}");
+            if (gameState != GameState.MAIN_MENU)
+            {
+                FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)gameState].position;
+                FindObjectOfType<PlayerMove>().transform.forward = playerStatePositions[(int)gameState].forward;
 
-        }
-        else
-        {
-            FindObjectOfType<PlayerMove>().transform.position = mainMenuPosition.position;
-            FindObjectOfType<PlayerMove>().transform.forward = mainMenuPosition.forward;
+            }
+            else
+            {
+                FindObjectOfType<PlayerMove>().transform.position = mainMenuPosition.position;
+                FindObjectOfType<PlayerMove>().transform.forward = mainMenuPosition.forward;
+            }
         }
     }
 
@@ -101,8 +105,7 @@ public class GameManager : MonoBehaviour
         foreach( GameObject character in npcs)
         {
             character.GetComponent<Collider>().enabled = false;
-        }
-    
+        }    
     }
 
     public bool IsPlayerCloseEnough(Vector3 objectPosition)

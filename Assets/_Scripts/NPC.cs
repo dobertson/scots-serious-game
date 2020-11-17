@@ -55,10 +55,13 @@ namespace Yarn.Unity.Example {
         {
             if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
             {
-                GameManager.Instance.DisablePlayerMovement();
-                FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
+                //GameManager.Instance.DisablePlayerMovement();
+
+                if (!string.IsNullOrEmpty(talkToNode))
+                {
+                    FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
+                }
             }
         }
     }
-
 }
