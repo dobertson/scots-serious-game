@@ -35,21 +35,17 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
-    }
-
-    private void Start()
-    {
-        if (fromTheBeginning)
-        {
-            gameState = GameState.MAIN_MENU;
-        }
 
         SetupState();
     }
 
     void SetupState()
     {
-        Debug.Log(SceneManager.GetActiveScene());
+        if (fromTheBeginning)
+        {
+            gameState = GameState.MAIN_MENU;
+        }
+
         if (SceneManager.GetActiveScene().name.Equals("0_TenementClose"))
         {
             Debug.Log($"Game State: {gameState}");
@@ -85,7 +81,6 @@ public class GameManager : MonoBehaviour
     {
         FindObjectOfType<PlayerLook>().enabled = true;
         FindObjectOfType<PlayerMove>().enabled = true;
-
 
         var npcs = GameObject.FindGameObjectsWithTag("NPC");
 

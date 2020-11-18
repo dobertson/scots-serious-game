@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
     public GameObject controlsWindow;
     public GameObject mainMenu;
 
-    public void Awake()
+    public void Start()
     {
         if(GameManager.Instance.gameState == GameState.MAIN_MENU)
         {
@@ -23,7 +23,8 @@ public class MainMenu : MonoBehaviour
 
     public void EnterBuilding()
     {
-        FindObjectOfType<MainMenuDoor>().OpenDoor();
+        // open door and enter building
+        //FindObjectOfType<MainMenuDoor>().OpenDoor();
         GameManager.Instance.gameState = GameState.SCENE_0;
         GameManager.Instance.EnablePlayerMovement();
         gameObject.SetActive(false);
