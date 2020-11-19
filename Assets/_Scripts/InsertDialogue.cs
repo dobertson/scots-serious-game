@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +18,13 @@ public class InsertDialogue : MonoBehaviour
             splittedParams[1],
             FindObjectOfType<DialogueTranslated>().Get(splittedParams[0]));
 
-        FindObjectOfType<Scrollbar>().value = 0;
+        //StartCoroutine(ScrollToBottom());
+    }
+
+    IEnumerator ScrollToBottom()
+    {
+        yield return new WaitForEndOfFrame(); 
+        FindObjectOfType<ScrollRect>().verticalNormalizedPosition = 0;
     }
 
     public void ClearText()
