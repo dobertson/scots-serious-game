@@ -82,11 +82,11 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<PlayerLook>().enabled = true;
         FindObjectOfType<PlayerMove>().enabled = true;
 
-        var npcs = GameObject.FindGameObjectsWithTag("NPC");
+        var npcs = FindObjectsOfType<NPC>();
 
-        foreach (GameObject character in npcs)
+        foreach (NPC character in npcs)
         {
-            character.GetComponent<Collider>().enabled = true;
+            character.gameObject.GetComponent<Collider>().enabled = true;
         }
     }
 
@@ -95,12 +95,12 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<PlayerLook>().enabled = false;
         FindObjectOfType<PlayerMove>().enabled = false;
 
-        var npcs = GameObject.FindGameObjectsWithTag("NPC");
+        var npcs = FindObjectsOfType<NPC>();
 
-        foreach( GameObject character in npcs)
+        foreach (NPC character in npcs)
         {
-            character.GetComponent<Collider>().enabled = false;
-        }    
+            character.gameObject.GetComponent<Collider>().enabled = false;
+        }
     }
 
     public bool IsPlayerCloseEnough(Vector3 objectPosition)

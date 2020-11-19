@@ -25,42 +25,41 @@ SOFTWARE.
 */
 
 using UnityEngine;
+using Yarn.Unity;
 
-namespace Yarn.Unity.Example {
     /// attached to the non-player characters, and stores the name of the Yarn
     /// node that should be run when you talk to them.
 
-    public class NPC : MonoBehaviour {
+public class NPC : MonoBehaviour {
 
-        public string characterName = "";
+    public string characterName = "";
 
-        public string talkToNode = "";
+    public string talkToNode = "";
 
-        [Header("Optional")]
-        public YarnProgram scriptToLoad;
+    [Header("Optional")]
+    public YarnProgram scriptToLoad;
 
-        void Start () {
-            if (scriptToLoad != null) {
-                // add script to dialgoue runner
-                DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-                dialogueRunner.Add(scriptToLoad);
+    void Start () {
+        if (scriptToLoad != null) {
+            // add script to dialgoue runner
+            DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            dialogueRunner.Add(scriptToLoad);
 
-                // add translated script to dialgue 
-                DialogueTranslated dialogueTranslated = FindObjectOfType<DialogueTranslated>();
-                dialogueTranslated.Add(scriptToLoad.localizations[0].text);
-             }
-        }
+            // add translated script to dialgue 
+            DialogueTranslated dialogueTranslated = FindObjectOfType<DialogueTranslated>();
+            dialogueTranslated.Add(scriptToLoad.localizations[0].text);
+            }
+    }
 
-        private void OnMouseDown()
+    private void OnMouseDown()
+    {
+        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
         {
-            if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
-            {
-                //GameManager.Instance.DisablePlayerMovement();
+            //GameManager.Instance.DisablePlayerMovement();
 
-                if (!string.IsNullOrEmpty(talkToNode))
-                {
-                    FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
-                }
+            if (!string.IsNullOrEmpty(talkToNode))
+            {
+                FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
             }
         }
     }
