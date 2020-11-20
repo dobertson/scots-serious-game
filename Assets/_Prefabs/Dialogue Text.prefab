@@ -67,6 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: Yer Maw - Here pal, am no gonnae take ony o yer pish. Zip it, or a'll skelp
+    ye.Yer Maw - Here pal, am no gonnae take ony o yer pish. Zip it, or a'll skelp
     ye.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7299c0886e9a6f048a6b1e5961eaf25c, type: 2}
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
