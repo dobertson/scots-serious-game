@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InsertDialogue : MonoBehaviour
+public class DialogueBuilder : MonoBehaviour
 {
     public Transform textArea;
     public TextMeshProUGUI textPrefab;
@@ -29,7 +29,7 @@ public class InsertDialogue : MonoBehaviour
         }
 
         var newText = Instantiate(textPrefab, textArea);
-        newText.GetComponent<DialogueText>().SetValues(
+        newText.GetComponent<DialogueLine>().SetValues(
             lineId,
             text,
             translatedText);

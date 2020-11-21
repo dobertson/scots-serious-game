@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DialogueText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string lineID;
     public string text;
@@ -22,12 +22,12 @@ public class DialogueText : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void ShowTranslation()
     {
-        FindObjectOfType<HoverTextTranslation>().SetText(translatedText);
+        FindObjectOfType<TranslatedLine>().Show(translatedText);
     }
 
     public void HideTranslation()
     {
-        FindObjectOfType<HoverTextTranslation>().HideText();
+        FindObjectOfType<TranslatedLine>().Hide();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

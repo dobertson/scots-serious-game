@@ -470,6 +470,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 192471032}
+  - component: {fileID: 192471034}
+  - component: {fileID: 192471033}
   m_Layer: 0
   m_Name: Player's Desk
   m_TagString: Untagged
@@ -493,6 +495,31 @@ Transform:
   m_Father: {fileID: 1718445724}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192471033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192471031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806ebd75ee46f7d4dbee96cb0ed2de77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &192471034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192471031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4796455, y: 1.2979612, z: 1.2616246}
+  m_Center: {x: -0.07267359, y: 1.1736779, z: -1.4462034}
 --- !u!1001 &203947713
 PrefabInstance:
   m_ObjectHideFlags: 0
