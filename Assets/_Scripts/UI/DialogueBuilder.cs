@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class DialogueBuilder : MonoBehaviour
 {
     public Transform textArea;
-    public TextMeshProUGUI textPrefab;
-    public TextMeshProUGUI speakerPrefab;
+    public GameObject dialogueLinePrefab;
+    public GameObject speakerPrefab;
     public string currentlySpeaking;
 
     public void CreateText(string line)
@@ -28,7 +28,7 @@ public class DialogueBuilder : MonoBehaviour
             newSpeaker.transform.SetSiblingIndex(textArea.transform.childCount - 2);
         }
 
-        var newText = Instantiate(textPrefab, textArea);
+        var newText = Instantiate(dialogueLinePrefab, textArea);
         newText.GetComponent<DialogueLine>().SetValues(
             lineId,
             text,

@@ -21,11 +21,18 @@ public class NoteListener : MonoBehaviour
 
     private void OnEnable()
     {
-        del.DisplayNote += NoteTextChange;
+        if(del)
+        {
+            del.DisplayNote += NoteTextChange;
+        }
     }
+
     private void OnDisable()
     {
-        del.DisplayNote -= NoteTextChange;
+        if (del)
+        {
+            del.DisplayNote -= NoteTextChange;
+        }
     }
 
     void NoteTextChange(string noteText)

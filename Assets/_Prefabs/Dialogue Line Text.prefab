@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8828468529499874974
+--- !u!1 &4338030274939937060
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8828468529499874973}
-  - component: {fileID: 8828468529499874971}
-  - component: {fileID: 8828468529499874972}
-  - component: {fileID: 8828468529499874970}
-  - component: {fileID: 5581357495505596339}
+  - component: {fileID: 4338030274939937063}
+  - component: {fileID: 4338030274939937057}
+  - component: {fileID: 4338030274939937062}
+  - component: {fileID: 4338030274939937056}
+  - component: {fileID: 847298800345311241}
   m_Layer: 5
   m_Name: Dialogue Text
   m_TagString: Untagged
@@ -20,13 +20,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8828468529499874973
+--- !u!224 &4338030274939937063
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828468529499874974}
+  m_GameObject: {fileID: 4338030274939937060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,21 +39,21 @@ RectTransform:
   m_AnchoredPosition: {x: 295.1, y: 0}
   m_SizeDelta: {x: 590.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8828468529499874971
+--- !u!222 &4338030274939937057
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828468529499874974}
+  m_GameObject: {fileID: 4338030274939937060}
   m_CullTransparentMesh: 0
---- !u!114 &8828468529499874972
+--- !u!114 &4338030274939937062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828468529499874974}
+  m_GameObject: {fileID: 4338030274939937060}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -66,9 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Yer Maw - Here pal, am no gonnae take ony o yer pish. Zip it, or a'll skelp
-    ye.Yer Maw - Here pal, am no gonnae take ony o yer pish. Zip it, or a'll skelp
-    ye.
+  m_text: Here hi hello how is it going this is a text to see how it is
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7299c0886e9a6f048a6b1e5961eaf25c, type: 2}
   m_sharedMaterial: {fileID: 6608116991573912029, guid: 7299c0886e9a6f048a6b1e5961eaf25c,
@@ -138,13 +136,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8828468529499874970
+--- !u!114 &4338030274939937056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828468529499874974}
+  m_GameObject: {fileID: 4338030274939937060}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
@@ -152,16 +150,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &5581357495505596339
+--- !u!114 &847298800345311241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828468529499874974}
+  m_GameObject: {fileID: 4338030274939937060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 668756918d297fd4bb4914b913455b79, type: 3}
+  m_Script: {fileID: 11500000, guid: 19fe7769b2f61b44eb34c4c00a4e17e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lineID: 

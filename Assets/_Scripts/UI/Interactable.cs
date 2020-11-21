@@ -9,14 +9,16 @@ public class Interactable : MonoBehaviour
     public string description;
     public bool isShowingDescription;
 
+    private void Awake()
+    {
+        isShowingDescription = false;
+    }
+
     private void Update()
     {
         if (isShowingDescription)
-        {
-            var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-            var distanceFromObject = Vector3.Distance(playerPosition, transform.position);
-
-            if (distanceFromObject > 5f)
+        { 
+            if (!GameManager.Instance.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Hide();
                 isShowingDescription = false;
@@ -28,7 +30,7 @@ public class Interactable : MonoBehaviour
     {
         if (!isShowingDescription)
         {
-            if (IsPlayerCloseEnough())
+            if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Show(description);
                 isShowingDescription = true;
@@ -40,18 +42,5 @@ public class Interactable : MonoBehaviour
     {
         FindObjectOfType<InteractableDescription>().Hide();
         isShowingDescription = false;
-    }
-
-    private bool IsPlayerCloseEnough()
-    {
-        var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        var distanceFromObject = Vector3.Distance(playerPosition, transform.position);
-
-        if (distanceFromObject < 5f)
-        {
-            return true;
-        }
-
-        return false;
     }
 }
