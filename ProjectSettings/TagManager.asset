@@ -8,6 +8,7 @@ TagManager:
   - DialogueRunnerTranslated
   - NoteText
   - NPC
+  - Word
   layers:
   - Default
   - TransparentFX

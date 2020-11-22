@@ -301,7 +301,9 @@ namespace Yarn.Unity {
                 }
             } else {
                 // Display the entire line immediately if textSpeed <= 0
-                onLineUpdate?.Invoke($"{line.ID}@{text}");
+                Debug.Log(text);
+                var splitLine = text.Split('@');
+                CreateLine(splitLine[0], line.ID, splitLine[1]);
             }
 
             // We're now waiting for the player to move on to the next line
@@ -347,14 +349,15 @@ namespace Yarn.Unity {
 
             currentOptionSelectionHandler = selectOption;
             
-            foreach (var optionString in optionsCollection.Options) {
+            foreach (var optionString in optionsCollection.Options)
+            {
+                var optionText = localisationProvider.GetLocalisedTextForLine(optionString.Line);
+
                 optionButtons [i].gameObject.SetActive (true);
 
                 // When the button is selected, tell the dialogue about it
                 optionButtons [i].onClick.RemoveAllListeners();
-                optionButtons [i].onClick.AddListener(() => SelectOption(optionString.ID));
-
-                var optionText = localisationProvider.GetLocalisedTextForLine(optionString.Line);
+                optionButtons [i].onClick.AddListener(() => SelectOption(optionString.ID, optionString.Line.ID, optionText));
 
                 if (optionText == null) {
                     Debug.LogWarning($"Option {optionString.Line.ID} doesn't have any localised text");
@@ -380,7 +383,6 @@ namespace Yarn.Unity {
             while (waitingForOptionSelection) {
                 yield return null;
             }
-
             
             // Hide all the buttons
             foreach (var button in optionButtons) {
@@ -458,15 +460,21 @@ namespace Yarn.Unity {
         /// </remarks>
         /// <param name="optionID">The <see cref="OptionSet.Option.ID"/> of
         /// the <see cref="OptionSet.Option"/> that was selected.</param>
-        public void SelectOption(int optionID) {
+        public void SelectOption(int optionID, string lineID, string optionText) {
             if (waitingForOptionSelection == false) {
                 Debug.LogWarning("An option was selected, but the dialogue UI was not expecting it.");
                 return;
             }
-            waitingForOptionSelection = false;
+            CreateLine("Player", lineID, optionText);
             currentOptionSelectionHandler?.Invoke(optionID);
+            waitingForOptionSelection = false;
         }
 
+        private void CreateLine(string speaker, string lineID, string lineText)
+        {
+            var lineTextTranslated = FindObjectOfType<DialogueTranslated>().Get(lineID);
+            FindObjectOfType<DialogueBuilder>().CreateText(speaker, lineID, lineText, lineTextTranslated);
+        }
     }
 
 }

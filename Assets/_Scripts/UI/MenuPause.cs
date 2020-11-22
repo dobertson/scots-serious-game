@@ -29,7 +29,11 @@ public class MenuPause : MonoBehaviour
                 }
                 
             }
-        }       
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GameManager.Instance.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     public void ShowPauseMenu()

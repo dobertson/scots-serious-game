@@ -83,11 +83,9 @@ public class GameManager : MonoBehaviour
     // interact with it, talk to NPC or load new scene
     public bool IsPlayerCloseEnough(Vector3 objectPosition)
     {
-        var minumDistance = 5f;
+        var minumDistance = 2f;
         var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         var distanceFromObject = Vector3.Distance(playerPosition, objectPosition);
-
-        Debug.Log(distanceFromObject);
 
         if (distanceFromObject < minumDistance)
         {

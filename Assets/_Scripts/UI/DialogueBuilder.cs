@@ -9,20 +9,12 @@ public class DialogueBuilder : MonoBehaviour
     public GameObject dialogueLinePrefab;
     public GameObject speakerPrefab;
     public string currentlySpeaking;
-
-    public void CreateText(string line)
+   
+    public void CreateText(string speaker, string lineID, string lineText, string lineTextTranslated, bool optionLine = false)
     {
-        string[] splitParams = line.Split('@');
-
-        var lineId = splitParams[0];
-        var splitText = splitParams[1].Split(':');
-        var speaker = splitText[0];
-        var text = splitText[1];
-        var translatedText = FindObjectOfType<DialogueTranslated>().Get(splitParams[0]);
-
         if (!speaker.Equals(currentlySpeaking))
         {
-            currentlySpeaking = splitText[0];
+            currentlySpeaking = speaker;
             var newSpeaker = Instantiate(speakerPrefab, textArea);
             newSpeaker.GetComponent<TextMeshProUGUI>().text = currentlySpeaking;
             newSpeaker.transform.SetSiblingIndex(textArea.transform.childCount - 2);
@@ -30,9 +22,9 @@ public class DialogueBuilder : MonoBehaviour
 
         var newText = Instantiate(dialogueLinePrefab, textArea);
         newText.GetComponent<DialogueLine>().SetValues(
-            lineId,
-            text,
-            translatedText);
+            lineID,
+            lineText,
+            lineTextTranslated);
 
         StartCoroutine(ScrollToBottom());
     }
