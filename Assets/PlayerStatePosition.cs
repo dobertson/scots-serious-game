@@ -17,19 +17,8 @@ public class PlayerStatePosition : MonoBehaviour
 
     void SetupState()
     {
-        if (fromTheBeginning)
-        {
-            GameManager.Instance.gameState = GameState.MAIN_MENU;
-        }
-
         // use state enum value as index to fetch position from playerStatePositions
         FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)GameManager.Instance.gameState].position;
         FindObjectOfType<PlayerMove>().transform.forward = playerStatePositions[(int)GameManager.Instance.gameState].forward;
-
-        // since main menu object is on UI prefab (and set to disabled) need to enable it if in Main Menu scene
-        if(GameManager.Instance.gameState == GameState.MAIN_MENU)
-        {
-            FindObjectOfType<MenuMain>().gameObject.SetActive(true);
-        }
     }
 }

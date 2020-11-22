@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuPause : MonoBehaviour
 {
-    public GameObject pauseMenu;
+    public GameObject pauseMenuContainer;
     private bool isPaused;
 
     private void Awake()
     {
-        pauseMenu.SetActive(false);
+        pauseMenuContainer.SetActive(false);
     }
 
     private void Update()
     {
-        if (GameManager.Instance.gameState != GameState.MAIN_MENU)
+        if (GameManager.Instance.gameState != GameState.MAIN_MENU || SceneManager.GetActiveScene().name != "0_TenementClose")
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -34,14 +35,14 @@ public class MenuPause : MonoBehaviour
     public void ShowPauseMenu()
     {
         isPaused = true;
-        pauseMenu.SetActive(true);
+        pauseMenuContainer.SetActive(true);
         GameManager.Instance.DisablePlayerMovement();
     }
 
     public void HidePauseMenu()
     {
         isPaused = false;
-        pauseMenu.SetActive(false);
+        pauseMenuContainer.SetActive(false);
         GameManager.Instance.EnablePlayerMovement();
     }
 }
