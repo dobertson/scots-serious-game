@@ -301,7 +301,6 @@ namespace Yarn.Unity {
                 }
             } else {
                 // Display the entire line immediately if textSpeed <= 0
-                Debug.Log(text);
                 var splitLine = text.Split('@');
                 CreateLine(splitLine[0], line.ID, splitLine[1]);
             }

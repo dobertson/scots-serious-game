@@ -6,22 +6,35 @@ position: 632,488
 <<if visited("Faither") is false>>
     Faither@Mornin son. #line:0fe03d5
 		-> Mornin da #line:06310bb
+			<<wait 1>>
     Faither@The day's the day ye stert the scuil, intit? #line:0bc8847
 		-> Aye #line:07dee60
+			<<wait 1>>
     Faither@A mind ma time et the scuil, yaised tae get intae rammies aw the time.  #line:0726f17
     Faither@Yer no the biggest wean son, yer a wee skinny malink.  #line:0b83faf
     Faither@If wa o thae boays sterts et ye, ye hiv tae hit thaim back.  #line:03c89ee
     Faither@Ye'll come oot it sair, bit ye cannae let folk walk ower ye.  #line:07689ec
     Faither@Mind at, n ye'll be awricht. #line:015f7d7
 		-> ... #line:0ad44d8
+			<<wait 1>>
     Faither@Right. wull we head aff? #line:0554ac8
     Faither@... #line:08fd786
     Faither@Hiv ye seen ma bunnet onie whaur? #line:050a374
     Faither@Help me fin ma bunnet an we kin lea. #line:07d8413
+	<<enableDadItems Faither>>
 <<endif>> 
 
-<<if $holding_item is true and $holding_bunnet is false>>
-    Faither@That's no ma bunnet. #line:02cd72c
+<<if $held_item neq "bunnet" and $held_item neq "">>
+    Faither@That's no ma bunnet, that's a {$held_item}. #line:02cd72c
     Faither@Mibbie yer mither kens whaur a left it. #line:085bf01
-<< endif>>
+	<<clearHeldItem Faither>>
+<<endif>>
+
+<<if $held_item eq "bunnet">>
+	<<wearBunnet Faither>>
+    Faither@There she is! Cheers son.
+	<<endScene Faither>>
+<<endif>>
+
+
 ===

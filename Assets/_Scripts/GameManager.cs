@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 // state represented by which scene the player is currently experiencing
 public enum GameState
@@ -81,12 +82,13 @@ public class GameManager : MonoBehaviour
 
     // used to determine if player is close enough to an object to
     // interact with it, talk to NPC or load new scene
-    public bool IsPlayerCloseEnough(Vector3 objectPosition)
+    public bool IsPlayerCloseEnough(Vector3 objectPosition, float? customDistance = null)
     {
-        var minumDistance = 2f;
+        var minumDistance = 4f;
         var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
         var distanceFromObject = Vector3.Distance(playerPosition, objectPosition);
 
+        // is custom distance has been specifiedm, use that distance instead
         if (distanceFromObject < minumDistance)
         {
             return true;

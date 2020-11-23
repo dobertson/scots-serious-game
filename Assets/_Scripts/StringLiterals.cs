@@ -9,4 +9,6 @@ public static class StringLiterals
     public static string DialogueRunnerTranslatedTag = "DialogueRunnerTranslated";
     public static string NoteTextTag = "NoteText";
     public static string WordTag = "Word";
+    public static string WordBoxTag = "WordBox";
+    public static string DadItemTag = "DadItem";
 }

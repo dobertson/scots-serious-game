@@ -1,0 +1,19 @@
+id,text,file,node,lineNumber
+line:026af6b,"Teacher@Hello, Glen, so glad to have you in our class finally. I hope you enjoyed looking round the school earlier, we do our best for the pupils.",ScuilTeacher,Teacher,7
+line:0842e71,"Teacher@I've put you next to Connor, down at the front here. I think you two will make great friends!",ScuilTeacher,Teacher,8
+line:0c19228,Teacher@Good morning class!,ScuilTeacher,Teacher.Welcome,16
+line:0133fab,The class@G o o d  m o r n i n g  M r s  T h o m s o n .,ScuilTeacher,Teacher.Welcome,17
+line:08508b3,"Teacher@As some of you might have noticed, we've got a new pupil in the class.",ScuilTeacher,Teacher.Welcome,18
+line:0dab5da,Teacher@Everyone say hello to Glen.,ScuilTeacher,Teacher.Welcome,19
+line:0c8ebd5,The class@H e l l o .,ScuilTeacher,Teacher.Welcome,20
+line:09ad363,"Teacher@If you remember last Friday, I said that on this week we would be moving onto English lessons.",ScuilTeacher,Teacher.Welcome,21
+line:0e3e54a,"Teacher@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly.",ScuilTeacher,Teacher.Welcome,22
+line:0d528d5,Teacher@I've prepared a fun exercise for you all that will help you learn the correct words for things.,ScuilTeacher,Teacher.Welcome,23
+line:0bb9a3a,Teacher@Everyone should have a small box on their desk.,ScuilTeacher,Teacher.Welcome,24
+line:0873953,"Teacher@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.",ScuilTeacher,Teacher.Welcome,25
+line:005f9d1,"Teacher@When you've thought up a word, I want you to write it down, and drop it in your box.",ScuilTeacher,Teacher.Welcome,26
+line:0dfefaa,"Teacher@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help.",ScuilTeacher,Teacher.Welcome,27
+line:048f1fd,"Teacher@No Glen, ""dug"" isn't a word.",ScuilTeacher,Teacher.Dug,35
+line:0ddf5be,"Teacher@The correct word is ""dog"".",ScuilTeacher,Teacher.Dug,36
+line:0673a26,"Glen@Miss, is ""cat"" a word?",ScuilTeacher,Teacher.Cat,44
+line:09bf5dd,"Teacher@Yes, cat is a word. You can put that in the box.",ScuilTeacher,Teacher.Cat,45

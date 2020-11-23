@@ -9,6 +9,8 @@ TagManager:
   - NoteText
   - NPC
   - Word
+  - DadItem
+  - WordBox
   layers:
   - Default
   - TransparentFX

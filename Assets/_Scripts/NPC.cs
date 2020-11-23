@@ -55,8 +55,6 @@ public class NPC : MonoBehaviour {
     {
         if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
         {
-            //GameManager.Instance.DisablePlayerMovement();
-
             if (!string.IsNullOrEmpty(talkToNode))
             {
                 FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
