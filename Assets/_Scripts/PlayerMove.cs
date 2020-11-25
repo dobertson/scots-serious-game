@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -26,6 +27,25 @@ public class PlayerMove : MonoBehaviour
     {
         charController = GetComponent<CharacterController>();
         isSprinting = false;
+        Debug.Log("Awake / PM:- " + transform.position);
+        //ChangePos();
+    }
+
+    void ChangePos()
+    {
+        if (SceneManager.GetActiveScene().name == StringLiterals.TenementScene)
+        {
+            var sp = GameObject.FindGameObjectWithTag(StringLiterals.PlayerStatePositionsTag).GetComponent<PlayerStatePosition>();
+            //character controller issue would reset player position, fixed here https://forum.unity.com/threads/does-transform-position-work-on-a-charactercontroller.36149/#post-4132021
+            charController.enabled = false;
+            transform.position = sp.GetPosition();
+            transform.forward = sp.GetDirection();
+            charController.enabled = true;
+        }
+    }
+    void Start()
+    {
+        Debug.Log("Start / PM:- " + transform.position);
     }
 
     private void Update()

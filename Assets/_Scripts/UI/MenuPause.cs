@@ -32,7 +32,7 @@ public class MenuPause : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GameManager.Instance.LoadScene(SceneManager.GetActiveScene().name);
+            FindObjectOfType<SceneTransitionManager>().LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -40,13 +40,13 @@ public class MenuPause : MonoBehaviour
     {
         isPaused = true;
         pauseMenuContainer.SetActive(true);
-        GameManager.Instance.DisablePlayerMovement();
+        FindObjectOfType<PlayerController>().DisablePlayerMovement();
     }
 
     public void HidePauseMenu()
     {
         isPaused = false;
         pauseMenuContainer.SetActive(false);
-        GameManager.Instance.EnablePlayerMovement();
+        FindObjectOfType<PlayerController>().EnablePlayerMovement();
     }
 }

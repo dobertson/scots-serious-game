@@ -30,10 +30,8 @@ using Yarn.Unity;
     /// attached to the non-player characters, and stores the name of the Yarn
     /// node that should be run when you talk to them.
 
-public class NPC : MonoBehaviour {
-
-    public string characterName = "";
-
+public class NPC : MonoBehaviour 
+{
     public string talkToNode = "";
 
     [Header("Optional")]

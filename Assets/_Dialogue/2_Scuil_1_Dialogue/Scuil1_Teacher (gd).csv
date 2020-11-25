@@ -1,0 +1,38 @@
+id,text,file,node,lineNumber
+line:026af6b,"Teacher@Hello, Glen, so glad to have you in our class finally. I hope you enjoyed looking round the school earlier, we do our best for the pupils.",Scuil1_Teacher,Teacher,7
+line:0842e71,"Teacher@I've put you next to Connor, down at the front here. I think you two will make great friends!",Scuil1_Teacher,Teacher,8
+line:0c19228,Teacher@Good morning class!,Scuil1_Teacher,Teacher.Welcome,16
+line:0133fab,The class@G o o d  m o r n i n g  M r s  T h o m s o n .,Scuil1_Teacher,Teacher.Welcome,17
+line:08508b3,"Teacher@As some of you might have noticed, we've got a new pupil in the class.",Scuil1_Teacher,Teacher.Welcome,18
+line:0dab5da,Teacher@Everyone say hello to Glen.,Scuil1_Teacher,Teacher.Welcome,19
+line:0c8ebd5,The class@H e l l o .,Scuil1_Teacher,Teacher.Welcome,20
+line:09ad363,"Teacher@If you remember last Friday, I said that on this week we would be moving onto English lessons.",Scuil1_Teacher,Teacher.Welcome,21
+line:0e3e54a,"Teacher@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly.",Scuil1_Teacher,Teacher.Welcome,22
+line:0d528d5,Teacher@I've prepared a fun exercise for you all that will help you learn the correct words for things.,Scuil1_Teacher,Teacher.Welcome,23
+line:0bb9a3a,Teacher@Everyone should have a small box on their desk.,Scuil1_Teacher,Teacher.Welcome,24
+line:0873953,"Teacher@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.",Scuil1_Teacher,Teacher.Welcome,25
+line:005f9d1,"Teacher@When you've thought up a word, I want you to write it down, and drop it in your box.",Scuil1_Teacher,Teacher.Welcome,26
+line:0dfefaa,"Teacher@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help.",Scuil1_Teacher,Teacher.Welcome,27
+line:048f1fd,"Teacher@No Glen, ""dug"" isn't a word.",Scuil1_Teacher,Teacher.Dug,35
+line:0ddf5be,"Teacher@The correct word is ""dog"".",Scuil1_Teacher,Teacher.Dug,36
+line:0673a26,"Glen@Miss, is ""cat"" a word?",Scuil1_Teacher,Teacher.Cat,44
+line:09bf5dd,"Teacher@Yes, cat is a word. You can put that in the box.",Scuil1_Teacher,Teacher.Cat,45
+line:07765c0,"Teacher@By ""Lugs"" i think you mean ""ears"".",Scuil1_Teacher,Teacher.Lugs,53
+line:0b62f71,"Teacher@""Lugs"" is slang.",Scuil1_Teacher,Teacher.Lugs,54
+line:074aa58,"Teacher@Sorry Glen, but ""crabbit"" is also slang.",Scuil1_Teacher,Teacher.Crabbit,62
+line:0970840,"Teacher@""Grumpy"" is a much better word.",Scuil1_Teacher,Teacher.Crabbit,63
+line:03ae259,"Teacher@""Ken"" isn't a word.",Scuil1_Teacher,Teacher.Ken,71
+line:0f1ba59,"Teacher@The correct word is ""know"".",Scuil1_Teacher,Teacher.Ken,72
+line:03e50a9,"Teacher@""Wean"" is slang again..",Scuil1_Teacher,Teacher.Wean,80
+line:0b2abcd,"Teacher@You should use the word ""child"" or ""kid"".",Scuil1_Teacher,Teacher.Wean,81
+line:06fb948,"Teacher@""Sister"" is a good word!.",Scuil1_Teacher,Teacher.Sister,89
+line:071adeb,"Teacher@""Heid"" is bad English.",Scuil1_Teacher,Teacher.Heid,97
+line:0b6dcc7,"Teacher@""Head"" is good English.",Scuil1_Teacher,Teacher.Heid,98
+line:0bf0a81,"Teacher@""Lowp"" is slang, you should use ""jump"" or ""leap"" instead.",Scuil1_Teacher,Teacher.Lowp,106
+line:0d667a6,"Teacher@""Hoose"" is bad english. When you leave school you go back to your ""house"".",Scuil1_Teacher,Teacher.Hoose,114
+line:046f99c,"Teacher@Yes, ""hair"" is allowed.",Scuil1_Teacher,Teacher.Hair,122
+line:062e3d7,"Teacher@""Auld"" is an ""old"" word!",Scuil1_Teacher,Teacher.Auld,130
+line:001e79c,"Teacher@We don't use it anymore, you should use ""old"".",Scuil1_Teacher,Teacher.Auld,131
+line:0f86268,"Teacher@Right class, that was a lot of good work today.",Scuil1_Teacher,Teacher.EndOfClass,139
+line:0921137,"Teacher@I hope we have all learned something, and improved our English.",Scuil1_Teacher,Teacher.EndOfClass,140
+line:0f0d24f,"Teacher@Take your tins home, and memorise those words!",Scuil1_Teacher,Teacher.EndOfClass,141

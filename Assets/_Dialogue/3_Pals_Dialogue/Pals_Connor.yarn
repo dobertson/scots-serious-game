@@ -1,0 +1,38 @@
+title: Pals.Connor
+tags:
+---
+<<set $englishUse to 0>>
+Connor@Get tae fuck, am no in mood fur your shite. #line:094104b
+James@Naw, a canne fucking believe you, whit wis that aw aboot? #line:00555a4
+James@Ivverie time ye hud the baw ye passed it tae wan ither cunt! Whit's the pint in ye being up front if ye cannae fucking dae anyhing. #line:086aa3e
+	->Aye, a agree wi James. Ye wur mince. #line:075c817
+	->Yes, i agree with James. You were shit. #line:0449839
+		<<set $englishUse to $englishUse + 1>>
+		Connor@"Y e s  I  a g r e e" #line:0e934cc
+		James@Why ur ye talking like a fanny? #line:0ee2f10
+			->You're the one that's shit at football. #line:09d4636
+				<<set $englishUse to $englishUse + 1>>
+			->You're the wan thit's mince et fitba. #line:0a23a07
+James@Whitiver, lea iz alane, it's bi wae noo. #line:04bdde9
+Connor@Honenstly man. #line:0ba6f66
+Connor@Glen ma boay, *you* wurnae shite. There's mibbie hope fur this team yit. #line:012f712
+	->Thanks pal, am done in. #line:040ded3
+		Connor@Nae bother. #line:0352911
+	->Thanks friend, i'm knackered now. #line:085d7b3
+		<<set $englishUse to $englishUse + 1>>
+		Connor@Nae boather "friend". #line:0a75b56
+James@Yous dain onyhing efterwards? #line:02dfea7
+Connor@A wis mibbie hinkin o gaun up tae the bing. A wiz oot wae the auld man the day afore last, ye ken how he likes his burd watching.  #line:06a61aa
+Connor@He's been wantin tae see a lapwing fur a while, bit a hink there aw gone. It's jist stuckies an cushie doos noo. #line:048c6a2
+Connor@No ma cup o tea, bit a saw a deid tod when a wiz wae him. Gied me the boke, bit it was kinna cuil.  #line:0e022f8
+Connor@Onywiys he's asked if a want tae jine him agane. A hink a wull. #line:02b0556
+James@Gads, that's boggin. Yer no richt. #line:0e631c0
+<<if $englishUse is 0>>
+	Connor@Dae ye want tae jine me Glen? #line:0d0d9e8
+		-> Aye that soons guid.
+			Connor@Magic. Let's head.
+<<else>>
+	Connor@Aye weel, am awiy. 
+<<endif>>
+<<nextScene PalsManager>>
+===

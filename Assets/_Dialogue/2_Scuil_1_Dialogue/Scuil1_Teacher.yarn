@@ -1,0 +1,145 @@
+title: Teacher
+tags: 
+colorID: 1
+position: 1300,762
+---
+<< if visited("Teacher") is false>>
+    Teacher@Hello, Glen, so glad to have you in our class finally. I hope you enjoyed looking round the school earlier, we do our best for the pupils. #line:026af6b
+    Teacher@I've put you next to Connor, down at the front here. I think you two will make great friends! #line:0842e71
+<<endif>>
+===
+title: Teacher.Welcome
+tags: 
+colorID: 0
+position: 1136,1003
+---
+Teacher@Good morning class! #line:0c19228
+The class@G o o d  m o r n i n g  M r s  T h o m s o n . #line:0133fab
+Teacher@As some of you might have noticed, we've got a new pupil in the class. #line:08508b3
+Teacher@Everyone say hello to Glen. #line:0dab5da
+The class@H e l l o . #line:0c8ebd5
+Teacher@If you remember last Friday, I said that on this week we would be moving onto English lessons. #line:09ad363
+Teacher@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly. #line:0e3e54a
+Teacher@I've prepared a fun exercise for you all that will help you learn the correct words for things. #line:0d528d5
+Teacher@Everyone should have a small box on their desk. #line:0bb9a3a
+Teacher@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.  #line:0873953
+Teacher@When you've thought up a word, I want you to write it down, and drop it in your box. #line:005f9d1
+Teacher@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help. #line:0dfefaa
+<<startWordGame Scuil1Manager>>
+===
+title: Teacher.Dug
+tags: 
+colorID: 0
+position: 935,1466
+---
+Teacher@No Glen, "dug" isn't a word. #line:048f1fd
+Teacher@The correct word is "dog". #line:0ddf5be
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Cat
+tags: 
+colorID: 0
+position: 1623,1237
+---
+Glen@Miss, is "cat" a word? #line:0673a26
+Teacher@Yes, cat is a word. You can put that in the box. #line:09bf5dd
+<<disableCharacterMovement Scuil1Manager>>
+===
+title: Teacher.Lugs
+tags: 
+colorID: 0
+position: 1633,1472
+---
+Teacher@By "Lugs" i think you mean "ears". #line:07765c0
+Teacher@"Lugs" is slang.  #line:0b62f71
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Crabbit
+tags: 
+colorID: 0
+position: 1407,1467
+---
+Teacher@Sorry Glen, but "crabbit" is also slang.  #line:074aa58
+Teacher@"Grumpy" is a much better word.  #line:0970840
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Ken
+tags: 
+colorID: 0
+position: 1174,1454
+---
+Teacher@"Ken" isn't a word.  #line:03ae259
+Teacher@The correct word is "know".  #line:0f1ba59
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Wean
+tags: 
+colorID: 0
+position: 696,1462
+---
+Teacher@"Wean" is slang again..  #line:03e50a9
+Teacher@You should use the word "child" or "kid".  #line:0b2abcd
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Sister
+tags: 
+colorID: 0
+position: 1400,1234
+---
+Teacher@"Sister" is a good word!.  #line:06fb948
+<<disableCharacterMovement Scuil1Manager>>
+===
+title: Teacher.Heid
+tags: 
+colorID: 0
+position: 1852,1459
+---
+Teacher@"Heid" is bad English. #line:071adeb
+Teacher@"Head" is good English. #line:0b6dcc7
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Lowp
+tags: 
+colorID: 0
+position: 1864,1236
+---
+Teacher@"Lowp" is slang, you should use "jump" or "leap" instead. #line:0bf0a81
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Hoose
+tags: 
+colorID: 0
+position: 933,1243
+---
+Teacher@"Hoose" is bad english. When you leave school you go back to your "house". #line:0d667a6
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.Hair
+tags: 
+colorID: 0
+position: 697,1245
+---
+Glen@Miss, whit aboot hair?
+Teacher@Sorry, I think you mean "what about hair".
+Teacher@Yes, "hair" is allowed. #line:046f99c
+<<disableCharacterMovement Scuil1Manager>>
+===
+title: Teacher.Auld
+tags: 
+colorID: 0
+position: 1168,1239
+---
+Teacher@"Auld" is an "old" word!  #line:062e3d7
+Teacher@We don't use it anymore, you should use "old". #line:001e79c
+<<showCorrectWord Scuil1Manager>>
+===
+title: Teacher.EndOfClass
+tags: 
+colorID: 0
+position: 1451,1009
+---
+Teacher@Right class, that was a lot of good work today. #line:0f86268
+Teacher@I hope we have all learned something, and improved our English. #line:0921137
+Teacher@Take your tins home, and memorise those words! #line:0f0d24f
+<<leaveScene Scuil1Manager>>
+===

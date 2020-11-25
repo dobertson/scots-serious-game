@@ -367,7 +367,7 @@ Animator:
   m_GameObject: {fileID: 2137108627100947213}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: dc1dacc99c42993499b968409533f7cb, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7009d7d352cb326479d5188f0e165fe9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 55e19d54f0fb14a409c5f144b684e2c2, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -418,7 +418,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Blether
-  isShowingDescription: 0
 --- !u!1 &2137108627100947215
 GameObject:
   m_ObjectHideFlags: 0

@@ -464,7 +464,7 @@ namespace Yarn.Unity {
                 Debug.LogWarning("An option was selected, but the dialogue UI was not expecting it.");
                 return;
             }
-            CreateLine("Player", lineID, optionText);
+            CreateLine("Glen", lineID, optionText);
             currentOptionSelectionHandler?.Invoke(optionID);
             waitingForOptionSelection = false;
         }

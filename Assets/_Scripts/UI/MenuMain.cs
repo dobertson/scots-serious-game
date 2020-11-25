@@ -11,24 +11,15 @@ public class MenuMain : MonoBehaviour
     public GameObject mainMenuContainer;    // main menu UI contain
     public GameObject controlsContainer;       // UI showing player controls
     public GameObject mainMenuDoor;         // door that leads into building
-    private GameObject player;              // ref to player object
+    private GameObject player;
 
     public void Start()
     {
         // if game state is main menu, show main menu
-        if(GameManager.Instance.gameState == GameState.MAIN_MENU)
-        {
-            mainMenuContainer.SetActive(true);
-            GameManager.Instance.DisablePlayerMovement();
-        }
-        else
-        {
-            mainMenuContainer.SetActive(false);
-            GameManager.Instance.EnablePlayerMovement();
-        }
-
+        mainMenuContainer.SetActive(true);
         controlsContainer.SetActive(false);
         player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
+        player.GetComponent<PlayerController>().DisablePlayerMovement();
         enteringPosition.position = new Vector3(
             enteringPosition.position.x,
             player.transform.position.y,    // set entering position to same height as player position to lock moving laong Y axis
@@ -45,13 +36,12 @@ public class MenuMain : MonoBehaviour
                 enteringPosition.position,
                 enteringSpeed * Time.deltaTime);
 
-            Debug.Log(Vector3.Distance(player.transform.position, enteringPosition.position));
             // if player is close to initial position
             if (Vector3.Distance(player.transform.position, enteringPosition.position) < 0.001f)
             {
                 // stop moving player and enable player controller
                 isPlayerEntering = false;
-                GameManager.Instance.EnablePlayerMovement();
+                FindObjectOfType<PlayerController>().EnablePlayerMovement();
             }
         }
     }

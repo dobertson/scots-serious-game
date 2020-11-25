@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  *  This class handles setting the players postion and facing
@@ -7,18 +9,32 @@ using UnityEngine;
  */
 public class PlayerStatePosition : MonoBehaviour
 {
-    public bool fromTheBeginning;                   // ignore what state is set in game manager and start from MAIN_MENU
     public List<Transform> playerStatePositions;    // list of positions of various states 
+    public GameObject player;
 
     private void Start()
     {
-        SetupState();
+        Debug.Log("-------------------"+GameManager.Instance.gameState);
+        foreach (Transform position in playerStatePositions)
+        {
+            position.gameObject.GetComponent<Renderer>().enabled = false;
+        }
+
+        var player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
+        var playerCharController = player.GetComponent<CharacterController>();
+        //character controller issue would reset player position, fixed here https://forum.unity.com/threads/does-transform-position-work-on-a-charactercontroller.36149/#post-4132021
+        playerCharController.enabled = false;
+        player.transform.position = GetPosition();
+        player.transform.forward = GetDirection();
+        playerCharController.enabled = true;
     }
 
-    void SetupState()
+    public Vector3 GetPosition()
     {
-        // use state enum value as index to fetch position from playerStatePositions
-        FindObjectOfType<PlayerMove>().transform.position = playerStatePositions[(int)GameManager.Instance.gameState].position;
-        FindObjectOfType<PlayerMove>().transform.forward = playerStatePositions[(int)GameManager.Instance.gameState].forward;
+        return playerStatePositions[(int)GameManager.Instance.gameState].position;
+    }
+    public Vector3 GetDirection()
+    {
+        return playerStatePositions[(int)GameManager.Instance.gameState].forward;
     }
 }

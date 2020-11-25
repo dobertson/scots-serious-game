@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Interactable : MonoBehaviour
 {
     public string description;
-    public bool isShowingDescription;
+    private bool isShowingDescription;
 
     private void Awake()
     {
@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
     private void Update()
     {
         if (isShowingDescription)
-        { 
+        {
             if (!GameManager.Instance.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Hide();

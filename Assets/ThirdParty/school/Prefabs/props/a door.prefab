@@ -54,6 +54,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -89,7 +90,6 @@ GameObject:
   - component: {fileID: 4343469102607976}
   - component: {fileID: 33218900247378062}
   - component: {fileID: 23072247148951056}
-  - component: {fileID: 7219536460378865218}
   m_Layer: 0
   m_Name: Cube_10
   m_TagString: Untagged
@@ -133,6 +133,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -160,20 +161,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7219536460378865218
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451300095138062}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: a1b64279c34bd0a49abf18b790a099b4, type: 3}
 --- !u!1 &1965528337302418
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +170,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4173873760860446}
+  - component: {fileID: 775492814}
+  - component: {fileID: 775492815}
+  - component: {fileID: 775492816}
   m_Layer: 0
   m_Name: a door
   m_TagString: Untagged
@@ -199,10 +189,51 @@ Transform:
   m_GameObject: {fileID: 1965528337302418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.73, y: 0, z: -4.36}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1103996, y: 1.38, z: 1}
   m_Children:
   - {fileID: 4556694855844174}
   - {fileID: 4343469102607976}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &775492814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965528337302418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3281703, y: 2.3996868, z: 0.41480044}
+  m_Center: {x: -0.04826024, y: 1.1934438, z: -0.097533405}
+--- !u!114 &775492815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965528337302418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ba4f76bab84f341bea8ec71ebd5209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Enter "faimly" memory
+  isShowingDescription: 0
+--- !u!114 &775492816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965528337302418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c786719ca72f16c4a8afefa80e76184c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 1_Faimly
+  openOnState: 0
