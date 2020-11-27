@@ -7,7 +7,7 @@ public class Scuil2Manager : MonoBehaviour
 {
     private void Start()
     {
-        FindObjectOfType<DialogueRunner>().StartDialogue("Scuil2.Pal");
+        //FindObjectOfType<DialogueRunner>().StartDialogue("Scuil2.Pal");
     }
 
     [YarnCommand("nextScene")]

@@ -1,7 +1,6 @@
 title: Faither
 tags: 
-colorID: 0
-position: 632,488
+position: 153.2168960571289,122.74763202667236
 ---
 <<if visited("Faither") is false>>
     Faither@Mornin son. #line:0fe03d5
@@ -35,5 +34,4 @@ position: 632,488
 <<endif>>
 
 Faither@Ye cannae lea withoot yer bunnet! #line:0ea3d16
-
 ===

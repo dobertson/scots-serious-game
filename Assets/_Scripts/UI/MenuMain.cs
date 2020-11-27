@@ -40,6 +40,7 @@ public class MenuMain : MonoBehaviour
             if (Vector3.Distance(player.transform.position, enteringPosition.position) < 0.001f)
             {
                 // stop moving player and enable player controller
+                mainMenuDoor.SetActive(true);
                 isPlayerEntering = false;
                 FindObjectOfType<PlayerController>().EnablePlayerMovement();
             }

@@ -1,145 +1,133 @@
 title: Teacher
 tags: 
+position: -257.308406829834,-299.8102722167969
 colorID: 1
-position: 1300,762
 ---
 << if visited("Teacher") is false>>
-    Teacher@Hello, Glen, so glad to have you in our class finally. I hope you enjoyed looking round the school earlier, we do our best for the pupils. #line:026af6b
-    Teacher@I've put you next to Connor, down at the front here. I think you two will make great friends! #line:0842e71
+    Mrs Thomson@Hello Glen, so glad to have you in our class.  #line:073e577
+	Mrs Thomson@I hope you enjoyed looking round the school earlier, we do the best for our pupils. #line:026af6b
+    Mrs Thomson@I've put you next to Connor, down at the front here. I think you two will make great friends! #line:0842e71
 <<endif>>
 ===
 title: Teacher.Welcome
 tags: 
-colorID: 0
-position: 1136,1003
+position: -255.0110321044922,-81.55760478973389
+colorID: 1
 ---
-Teacher@Good morning class! #line:0c19228
+Mrs Thomson@Good morning class! #line:0c19228
 The class@G o o d  m o r n i n g  M r s  T h o m s o n . #line:0133fab
-Teacher@As some of you might have noticed, we've got a new pupil in the class. #line:08508b3
-Teacher@Everyone say hello to Glen. #line:0dab5da
+Mrs Thomson@As some of you might have noticed, we've got a new pupil in the class. #line:08508b3
+Mrs Thomson@Everyone say hello to Glen. #line:0dab5da
 The class@H e l l o . #line:0c8ebd5
-Teacher@If you remember last Friday, I said that on this week we would be moving onto English lessons. #line:09ad363
-Teacher@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly. #line:0e3e54a
-Teacher@I've prepared a fun exercise for you all that will help you learn the correct words for things. #line:0d528d5
-Teacher@Everyone should have a small box on their desk. #line:0bb9a3a
-Teacher@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.  #line:0873953
-Teacher@When you've thought up a word, I want you to write it down, and drop it in your box. #line:005f9d1
-Teacher@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help. #line:0dfefaa
+Mrs Thomson@If you remember last Friday, I said that on this week we would be moving onto English lessons. #line:09ad363
+Mrs Thomson@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly. #line:0e3e54a
+Mrs Thomson@I've prepared a fun exercise for you all that will help you learn the correct words for things. #line:0d528d5
+Mrs Thomson@Everyone should have a small box on their desk. #line:0bb9a3a
+Mrs Thomson@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.  #line:0873953
+Mrs Thomson@When you've thought up a word, I want you to write it down, and drop it in your box. #line:005f9d1
+Mrs Thomson@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help. #line:0dfefaa
 <<startWordGame Scuil1Manager>>
 ===
 title: Teacher.Dug
 tags: 
-colorID: 0
-position: 935,1466
+position: 1014.3006267547607,611.107536315918
 ---
-Teacher@No Glen, "dug" isn't a word. #line:048f1fd
-Teacher@The correct word is "dog". #line:0ddf5be
+Mrs Thomson@No Glen, "dug" isn't a word. #line:048f1fd
+Mrs Thomson@The correct word is "dog". #line:0ddf5be
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Cat
 tags: 
-colorID: 0
-position: 1623,1237
+position: 64.32710647583008,627.1893129348755
 ---
 Glen@Miss, is "cat" a word? #line:0673a26
-Teacher@Yes, cat is a word. You can put that in the box. #line:09bf5dd
+Mrs Thomson@Yes, cat is a word. You can put that in the box. #line:09bf5dd
 <<disableCharacterMovement Scuil1Manager>>
 ===
 title: Teacher.Lugs
 tags: 
-colorID: 0
-position: 1633,1472
+position: 878.754243850708,366.43476390838623
 ---
-Teacher@By "Lugs" i think you mean "ears". #line:07765c0
-Teacher@"Lugs" is slang.  #line:0b62f71
+Mrs Thomson@By "Lugs" i think you mean "ears". #line:07765c0
+Mrs Thomson@"Lugs" is slang.  #line:0b62f71
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Crabbit
 tags: 
-colorID: 0
-position: 1407,1467
+position: 717.9364929199219,588.133526802063
 ---
-Teacher@Sorry Glen, but "crabbit" is also slang.  #line:074aa58
-Teacher@"Grumpy" is a much better word.  #line:0970840
+Mrs Thomson@Sorry Glen, but "crabbit" is also slang.  #line:074aa58
+Mrs Thomson@"Grumpy" is a much better word.  #line:0970840
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Ken
 tags: 
-colorID: 0
-position: 1174,1454
+position: 366.4347839355469,609.958833694458
 ---
-Teacher@"Ken" isn't a word.  #line:03ae259
-Teacher@The correct word is "know".  #line:0f1ba59
+Mrs Thomson@"Ken" isn't a word.  #line:03ae259
+Mrs Thomson@The correct word is "know".  #line:0f1ba59
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Wean
 tags: 
-colorID: 0
-position: 696,1462
+position: -251.56493711471558,629.4867115020752
 ---
-Teacher@"Wean" is slang again..  #line:03e50a9
-Teacher@You should use the word "child" or "kid".  #line:0b2abcd
+Mrs Thomson@"Wean" is slang again..  #line:03e50a9
+Mrs Thomson@You should use the word "child" or "kid".  #line:0b2abcd
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Sister
 tags: 
-colorID: 0
-position: 1400,1234
+position: -717.936466217041,382.51655197143555
 ---
-Teacher@"Sister" is a good word!.  #line:06fb948
+Mrs Thomson@"Sister" is a good word!  #line:06fb948
 <<disableCharacterMovement Scuil1Manager>>
 ===
 title: Teacher.Heid
 tags: 
-colorID: 0
-position: 1852,1459
+position: -485.89940071105957,373.32697200775146
 ---
-Teacher@"Heid" is bad English. #line:071adeb
-Teacher@"Head" is good English. #line:0b6dcc7
+Mrs Thomson@"Heid" is bad English. #line:071adeb
+Mrs Thomson@"Head" is good English. #line:0b6dcc7
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Lowp
 tags: 
-colorID: 0
-position: 1864,1236
+position: -257.5527153015137,358.6143493652344
 ---
-Teacher@"Lowp" is slang, you should use "jump" or "leap" instead. #line:0bf0a81
+Mrs Thomson@"Lowp" is slang, you should use "jump" or "leap" instead. #line:0bf0a81
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Hoose
 tags: 
-colorID: 0
-position: 933,1243
+position: 769.9840869903564,45.471500396728516
 ---
-Teacher@"Hoose" is bad english. When you leave school you go back to your "house". #line:0d667a6
+Mrs Thomson@"Hoose" is bad english. When you leave school you go back to your "house". #line:0d667a6
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.Hair
 tags: 
-colorID: 0
-position: 697,1245
+position: 115.88973045349121,354.2101249694824
 ---
-Glen@Miss, whit aboot hair?
-Teacher@Sorry, I think you mean "what about hair".
-Teacher@Yes, "hair" is allowed. #line:046f99c
+Glen@Miss, whit aboot hair? #line:00f74b8
+Mrs Thomson@Sorry, I think you mean "what about hair". #line:0c35bf4
+Mrs Thomson@Yes, "hair" is allowed. #line:046f99c
 <<disableCharacterMovement Scuil1Manager>>
 ===
 title: Teacher.Auld
 tags: 
-colorID: 0
-position: 1168,1239
+position: 408.4856472015381,-8.336441040039062
 ---
-Teacher@"Auld" is an "old" word!  #line:062e3d7
-Teacher@We don't use it anymore, you should use "old". #line:001e79c
+Mrs Thomson@"Auld" is an "old" word!  #line:062e3d7
+Mrs Thomson@We don't use it anymore, you should use "old". #line:001e79c
 <<showCorrectWord Scuil1Manager>>
 ===
 title: Teacher.EndOfClass
 tags: 
-colorID: 0
-position: 1451,1009
+position: 448.6326141357422,306.12580490112305
 ---
-Teacher@Right class, that was a lot of good work today. #line:0f86268
-Teacher@I hope we have all learned something, and improved our English. #line:0921137
-Teacher@Take your tins home, and memorise those words! #line:0f0d24f
+Mrs Thomson@Right class, that was a lot of good work today. #line:0f86268
+Mrs Thomson@I hope we have all learned something, and improved our English. #line:0921137
+Mrs Thomson@Take your tins home, and memorise those words! #line:0f0d24f
 <<leaveScene Scuil1Manager>>
 ===

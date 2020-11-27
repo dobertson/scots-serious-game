@@ -12,6 +12,7 @@ TagManager:
   - DadItem
   - WordBox
   - PlayerStatePositions
+  - SoundManager
   layers:
   - Default
   - TransparentFX

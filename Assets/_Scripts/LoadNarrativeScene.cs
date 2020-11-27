@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 /*
  * This script handles the moving from the main scene to each narrative scene.
  * Doors will only be available depending on what the game state is (ie. the current
@@ -100,8 +101,16 @@ public class LoadNarrativeScene : MonoBehaviour
     {
         if (IsCloseEnough())
         {
-            FindObjectOfType<SceneTransitionManager>().LoadScene(sceneName);
+            var soundManager = GameObject.FindGameObjectWithTag("SoundManager");
+            soundManager.GetComponent<SoundManager>().PlayDoorOpeningSFX();
+            StartCoroutine(WaitForSound(soundManager.GetComponent<SoundManager>().GetComponent<AudioSource>()));
         }
+    }
+
+    public IEnumerator WaitForSound(AudioSource audiosource)
+    {
+        yield return new WaitUntil(() => audiosource.isPlaying == false);
+        FindObjectOfType<SceneTransitionManager>().LoadScene(sceneName);
     }
 
     private bool IsCloseEnough()

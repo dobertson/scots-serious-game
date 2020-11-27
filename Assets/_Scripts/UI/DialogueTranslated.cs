@@ -30,7 +30,7 @@ public class DialogueTranslated : MonoBehaviour
             while (csv.Read())
             {
                 string text;
-                string[] splitText = csv.GetField("text").Split(':');
+                string[] splitText = csv.GetField("text").Split('@');
 
                 /** 
                  *  all dialogue lines start with a name

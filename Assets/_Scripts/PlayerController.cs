@@ -8,14 +8,6 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            FindObjectOfType<SceneTransitionManager>().LoadScene(StringLiterals.BackEtTheScuilScene);
-        }
-    }
-
     // enable control of player looking/moving
     public void EnablePlayerMovement()
     {

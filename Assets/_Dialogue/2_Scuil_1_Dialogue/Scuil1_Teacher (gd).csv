@@ -1,38 +1,41 @@
 id,text,file,node,lineNumber
-line:026af6b,"Teacher@Hello, Glen, so glad to have you in our class finally. I hope you enjoyed looking round the school earlier, we do our best for the pupils.",Scuil1_Teacher,Teacher,7
-line:0842e71,"Teacher@I've put you next to Connor, down at the front here. I think you two will make great friends!",Scuil1_Teacher,Teacher,8
-line:0c19228,Teacher@Good morning class!,Scuil1_Teacher,Teacher.Welcome,16
-line:0133fab,The class@G o o d  m o r n i n g  M r s  T h o m s o n .,Scuil1_Teacher,Teacher.Welcome,17
-line:08508b3,"Teacher@As some of you might have noticed, we've got a new pupil in the class.",Scuil1_Teacher,Teacher.Welcome,18
-line:0dab5da,Teacher@Everyone say hello to Glen.,Scuil1_Teacher,Teacher.Welcome,19
-line:0c8ebd5,The class@H e l l o .,Scuil1_Teacher,Teacher.Welcome,20
-line:09ad363,"Teacher@If you remember last Friday, I said that on this week we would be moving onto English lessons.",Scuil1_Teacher,Teacher.Welcome,21
-line:0e3e54a,"Teacher@As you get older, you will need to write a lot, so it is important that you know how to how to spell correctly.",Scuil1_Teacher,Teacher.Welcome,22
-line:0d528d5,Teacher@I've prepared a fun exercise for you all that will help you learn the correct words for things.,Scuil1_Teacher,Teacher.Welcome,23
-line:0bb9a3a,Teacher@Everyone should have a small box on their desk.,Scuil1_Teacher,Teacher.Welcome,24
-line:0873953,"Teacher@I want everyone to think of words they known. It can be any word, it can be an object, or a word you just really like to say.",Scuil1_Teacher,Teacher.Welcome,25
-line:005f9d1,"Teacher@When you've thought up a word, I want you to write it down, and drop it in your box.",Scuil1_Teacher,Teacher.Welcome,26
-line:0dfefaa,"Teacher@Don't worry if you don't know how to spell a word, just write it down and I will be around to give any help.",Scuil1_Teacher,Teacher.Welcome,27
-line:048f1fd,"Teacher@No Glen, ""dug"" isn't a word.",Scuil1_Teacher,Teacher.Dug,35
-line:0ddf5be,"Teacher@The correct word is ""dog"".",Scuil1_Teacher,Teacher.Dug,36
-line:0673a26,"Glen@Miss, is ""cat"" a word?",Scuil1_Teacher,Teacher.Cat,44
-line:09bf5dd,"Teacher@Yes, cat is a word. You can put that in the box.",Scuil1_Teacher,Teacher.Cat,45
-line:07765c0,"Teacher@By ""Lugs"" i think you mean ""ears"".",Scuil1_Teacher,Teacher.Lugs,53
-line:0b62f71,"Teacher@""Lugs"" is slang.",Scuil1_Teacher,Teacher.Lugs,54
-line:074aa58,"Teacher@Sorry Glen, but ""crabbit"" is also slang.",Scuil1_Teacher,Teacher.Crabbit,62
-line:0970840,"Teacher@""Grumpy"" is a much better word.",Scuil1_Teacher,Teacher.Crabbit,63
-line:03ae259,"Teacher@""Ken"" isn't a word.",Scuil1_Teacher,Teacher.Ken,71
-line:0f1ba59,"Teacher@The correct word is ""know"".",Scuil1_Teacher,Teacher.Ken,72
-line:03e50a9,"Teacher@""Wean"" is slang again..",Scuil1_Teacher,Teacher.Wean,80
-line:0b2abcd,"Teacher@You should use the word ""child"" or ""kid"".",Scuil1_Teacher,Teacher.Wean,81
-line:06fb948,"Teacher@""Sister"" is a good word!.",Scuil1_Teacher,Teacher.Sister,89
-line:071adeb,"Teacher@""Heid"" is bad English.",Scuil1_Teacher,Teacher.Heid,97
-line:0b6dcc7,"Teacher@""Head"" is good English.",Scuil1_Teacher,Teacher.Heid,98
-line:0bf0a81,"Teacher@""Lowp"" is slang, you should use ""jump"" or ""leap"" instead.",Scuil1_Teacher,Teacher.Lowp,106
-line:0d667a6,"Teacher@""Hoose"" is bad english. When you leave school you go back to your ""house"".",Scuil1_Teacher,Teacher.Hoose,114
-line:046f99c,"Teacher@Yes, ""hair"" is allowed.",Scuil1_Teacher,Teacher.Hair,122
-line:062e3d7,"Teacher@""Auld"" is an ""old"" word!",Scuil1_Teacher,Teacher.Auld,130
-line:001e79c,"Teacher@We don't use it anymore, you should use ""old"".",Scuil1_Teacher,Teacher.Auld,131
-line:0f86268,"Teacher@Right class, that was a lot of good work today.",Scuil1_Teacher,Teacher.EndOfClass,139
-line:0921137,"Teacher@I hope we have all learned something, and improved our English.",Scuil1_Teacher,Teacher.EndOfClass,140
-line:0f0d24f,"Teacher@Take your tins home, and memorise those words!",Scuil1_Teacher,Teacher.EndOfClass,141
+line:073e577,"Mrs Thomson@Hullo Glen, am gled tae hae ye in oor cless.",Scuil1_Teacher,Teacher,7
+line:026af6b,"Mrs Thomson@A howp ye enjoayed leuking roon the scuil afore, we dae the best fur oor pupils.",Scuil1_Teacher,Teacher,8
+line:0842e71,"Mrs Thomson@A've sat ye nixt tae Connor, doon bit the front here. A hink you twae wull mak guid pals!",Scuil1_Teacher,Teacher,9
+line:0c19228,Mrs Thomson@Guid mornin cless!,Scuil1_Teacher,Teacher.Welcome,17
+line:0133fab,The class@G u i d  m o r n i n  M r s  T h o m s o n .,Scuil1_Teacher,Teacher.Welcome,18
+line:08508b3,"Mrs Thomson@Is some o ye micht hae noticed, we've goat a new pupil in the cless.",Scuil1_Teacher,Teacher.Welcome,19
+line:0dab5da,Mrs Thomson@Evdy say hullo tae Glen.,Scuil1_Teacher,Teacher.Welcome,20
+line:0c8ebd5,The class@H u l l o .,Scuil1_Teacher,Teacher.Welcome,21
+line:09ad363,"Mrs Thomson@If ye mind last Friday, a said that oan this week we wid bi movin oantae Inglis lessons.",Scuil1_Teacher,Teacher.Welcome,22
+line:0e3e54a,"Mrs Thomson@Is ye get aulder, ye wull need tae scrieve a loat, si it is important thit ye ken how tae spell correctly.",Scuil1_Teacher,Teacher.Welcome,23
+line:0d528d5,Mrs Thomson@A've prepared a fun exercise fur ye aw thit wull help ye lairn the richt wirds fur hings.,Scuil1_Teacher,Teacher.Welcome,24
+line:0bb9a3a,Mrs Thomson@Edvy shuild hae a wee boax oan thir desk.,Scuil1_Teacher,Teacher.Welcome,25
+line:0873953,"Mrs Thomson@A want evdy tae hink o wirds they ken. It kin bi onie wird, it kin bi an object, or a wird ye jist really like tae say.",Scuil1_Teacher,Teacher.Welcome,26
+line:005f9d1,"Mrs Thomson@When ye've thocht up a wird, a want ye tae scrieve it doon, an droap it in yer boax.",Scuil1_Teacher,Teacher.Welcome,27
+line:0dfefaa,"Mrs Thomson@Dinnae worry if ye dinnae keen how tae spell a wird, jist scrieve it doon an a wull be aroon tae gie oot onie help.",Scuil1_Teacher,Teacher.Welcome,28
+line:048f1fd,"Mrs Thomson@No Glen, ""dug"" isnae a wird.",Scuil1_Teacher,Teacher.Dug,35
+line:0ddf5be,"Mrs Thomson@The correct wird is ""dog"".",Scuil1_Teacher,Teacher.Dug,36
+line:0673a26,"Glen@Miss, is ""cat"" a word?",Scuil1_Teacher,Teacher.Cat,43
+line:09bf5dd,"Mrs Thomson@Aye, cat is a wird. Ye kin pit that in the boax.",Scuil1_Teacher,Teacher.Cat,44
+line:07765c0,"Mrs Thomson@Bi ""Lugs"" a hink ye mean ""ears"".",Scuil1_Teacher,Teacher.Lugs,51
+line:0b62f71,"Mrs Thomson@""Lugs"" is slang.",Scuil1_Teacher,Teacher.Lugs,52
+line:074aa58,"Mrs Thomson@Sorry Glen, bit ""crabbit"" is slang anaw.",Scuil1_Teacher,Teacher.Crabbit,59
+line:0970840,"Mrs Thomson@""Grumpy"" is a muckle better wird.",Scuil1_Teacher,Teacher.Crabbit,60
+line:03ae259,"Mrs Thomson@""Ken"" isnae a wird.",Scuil1_Teacher,Teacher.Ken,67
+line:0f1ba59,"Mrs Thomson@The correct wird is ""know"".",Scuil1_Teacher,Teacher.Ken,68
+line:03e50a9,"Mrs Thomson@""Wean"" is slang again.",Scuil1_Teacher,Teacher.Wean,75
+line:0b2abcd,"Mrs Thomson@Ye shuild yaise the wird ""child"" or ""kid"".",Scuil1_Teacher,Teacher.Wean,76
+line:06fb948,"Mrs Thomson@""Sister"" is a guid wird!",Scuil1_Teacher,Teacher.Sister,83
+line:071adeb,"Mrs Thomson@""Heid"" is bad Inglis.",Scuil1_Teacher,Teacher.Heid,90
+line:0b6dcc7,"Mrs Thomson@""Head"" is guid English.",Scuil1_Teacher,Teacher.Heid,91
+line:0bf0a81,"Mrs Thomson@""Lowp"" is slang, ye shuild yaise ""jump"" or ""leap"" insteid.",Scuil1_Teacher,Teacher.Lowp,98
+line:0d667a6,"Mrs Thomson@""Hoose"" is bad Inglish. When ye leave the scuil ye gi back tae yer ""house"".",Scuil1_Teacher,Teacher.Hoose,105
+line:00f74b8,"Glen@Miss, what about hair?",Scuil1_Teacher,Teacher.Hair,112
+line:0c35bf4,"Mrs Thomson@Sorry, a hink ye mean ""what about hair"".",Scuil1_Teacher,Teacher.Hair,113
+line:046f99c,"Mrs Thomson@Aye, ""hair"" is allood.",Scuil1_Teacher,Teacher.Hair,114
+line:062e3d7,"Mrs Thomson@""Auld"" is an ""old"" wird!",Scuil1_Teacher,Teacher.Auld,121
+line:001e79c,"Mrs Thomson@We dinnae yaise it oniemair, ye shuild yaise ""old"".",Scuil1_Teacher,Teacher.Auld,122
+line:0f86268,"Mrs Thomson@Right cless, that wis a loat o guid wirk the day.",Scuil1_Teacher,Teacher.EndOfClass,129
+line:0921137,"Mrs Thomson@A howp we hae aw lairned somehing, an improved oor Inglis.",Scuil1_Teacher,Teacher.EndOfClass,130
+line:0f0d24f,"Mrs Thomson@Tak yer tins hame, an memorise thae wirds!",Scuil1_Teacher,Teacher.EndOfClass,131

@@ -10,6 +10,7 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-GB
   stringIDs:
+  - line:073e577
   - line:026af6b
   - line:0842e71
   - line:0c19228
@@ -41,6 +42,8 @@ ScriptedImporter:
   - line:0b6dcc7
   - line:0bf0a81
   - line:0d667a6
+  - line:00f74b8
+  - line:0c35bf4
   - line:046f99c
   - line:062e3d7
   - line:001e79c
