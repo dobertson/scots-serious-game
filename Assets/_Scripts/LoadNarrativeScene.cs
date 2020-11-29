@@ -7,7 +7,8 @@ using UnityEngine;
  */
 public class LoadNarrativeScene : MonoBehaviour
 {
-    public string description;
+    public string roomName;
+    private string description;
     private bool isShowingDescription;
 
     public GameState openOnState;   //if game state to have this door open
@@ -49,6 +50,15 @@ public class LoadNarrativeScene : MonoBehaviour
         if (GameManager.Instance.gameState < openOnState)
         {
             GetComponent<Collider>().enabled = false;
+        }
+
+        if (GameManager.Instance.gameState == openOnState)
+        {
+            description = $"Enter '{roomName}' memory?";
+        }
+        else
+        {
+            description = $"Revist '{roomName}' memory?";
         }
 
         // chaning from MAIN_MENU to FAIMLY state after this Start() runs
