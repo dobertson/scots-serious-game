@@ -399,3 +399,4 @@ MonoBehaviour:
   doorOpeningSFX: {fileID: 8300000, guid: da5d46e60af15dd48a6f6661d3be620d, type: 3}
   pickUpSFX: {fileID: 8300000, guid: b7acad15fd50ae74791a0271eb7f77e0, type: 3}
   popSFX: {fileID: 8300000, guid: 2a7f05c5f480c7b4aa6ee325c45798d9, type: 3}
+  ballKickSFX: {fileID: 8300000, guid: 061d172cc39ec474686e4a626b1e6fb9, type: 3}

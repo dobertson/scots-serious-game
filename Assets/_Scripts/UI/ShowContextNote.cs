@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
+/*
+ * Script that sets the text and shows the context note UI
+ */
 public class ShowContextNote : MonoBehaviour
 {
     TextMeshProUGUI myText;
