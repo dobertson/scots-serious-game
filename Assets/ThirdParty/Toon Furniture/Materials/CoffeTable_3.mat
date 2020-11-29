@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: CoffeTable_3
   m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
-  m_ShaderKeywords: _EMISSION _GLOSSINESS_FROM_BASE_ALPHA _NORMALMAP _SPECULAR_COLOR
-  m_LightmapFlags: 1
+  m_ShaderKeywords: _GLOSSINESS_FROM_BASE_ALPHA _NORMALMAP _SPECULAR_COLOR
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2050
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c4cd6bcfb9176c94686fa91098f2b1e4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 33bbbe464a9423341a8155bda4859500, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c4cd6bcfb9176c94686fa91098f2b1e4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 33bbbe464a9423341a8155bda4859500, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:

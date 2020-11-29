@@ -66,6 +66,7 @@ public class Scuil1Manager : MonoBehaviour
         if(index < words.Count)
         {
             words[index].SetActive(true);
+            FindObjectOfType<SoundManager>().PlayPopSFX();
         }
         else
         {

@@ -52,7 +52,8 @@ public class LoadNarrativeScene : MonoBehaviour
             GetComponent<Collider>().enabled = false;
         }
 
-        if (GameManager.Instance.gameState == openOnState)
+        if (GameManager.Instance.gameState == openOnState
+            || (GameManager.Instance.gameState == GameState.MAIN_MENU && openOnState == GameState.FAIMLY))
         {
             description = $"Enter '{roomName}' memory?";
         }

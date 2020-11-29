@@ -6,6 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     private AudioSource source;
     public AudioClip doorOpeningSFX;
+    public AudioClip pickUpSFX;
+    public AudioClip popSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +18,17 @@ public class SoundManager : MonoBehaviour
     public void PlayDoorOpeningSFX()
     {
         source.clip = doorOpeningSFX;
+        source.Play();
+    }
+
+    public void PlayItemPickupSFX()
+    {
+        source.clip = pickUpSFX;
+        source.Play();
+    }
+    public void PlayPopSFX()
+    {
+        source.clip = popSFX;
         source.Play();
     }
 }

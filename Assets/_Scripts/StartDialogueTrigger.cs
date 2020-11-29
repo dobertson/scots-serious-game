@@ -13,7 +13,6 @@ public class StartDialogueTrigger : MonoBehaviour
         if(other.tag == StringLiterals.PlayerTag)
         {
             FindObjectOfType<DialogueRunner>().StartDialogue(yarnNode);
-            FindObjectOfType<PlayerLook>().transform.LookAt(lookAtPosition);
             GetComponent<Collider>().enabled = false;
         }
     }

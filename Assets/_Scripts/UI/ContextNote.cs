@@ -5,6 +5,7 @@ public class ContextNote : MonoBehaviour
     [TextArea]
     public string noteText;
     public GameState showNoteOnState;
+    private Outline outline;
 
     private void Start()
     {
@@ -12,6 +13,9 @@ public class ContextNote : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        outline = GetComponent<Outline>();
+        outline.enabled = false;
     }
 
     private void OnMouseDown()
@@ -22,5 +26,15 @@ public class ContextNote : MonoBehaviour
             gameObject.SetActive(false);
             FindObjectOfType<InteractableDescription>().Hide();
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        outline.enabled = true;
+    }
+
+    private void OnMouseExit()
+    {
+        outline.enabled = false;
     }
 }

@@ -6,6 +6,7 @@ using Yarn.Unity;
 public class StartClassSitDown : MonoBehaviour
 {
     public Transform sittingPosition;
+    public string startYarnNode;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class StartClassSitDown : MonoBehaviour
             player.transform.eulerAngles = sittingPosition.eulerAngles;
             FindObjectOfType<PlayerLook>().transform.rotation = Quaternion.Euler(0, 0, 0);
             GetComponent<Collider>().enabled = false;
-            FindObjectOfType<DialogueRunner>().StartDialogue("Teacher.Welcome");
+            FindObjectOfType<DialogueRunner>().StartDialogue(startYarnNode);
         }
     }
 }

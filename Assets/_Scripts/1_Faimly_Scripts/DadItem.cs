@@ -20,6 +20,7 @@ public class DadItem : MonoBehaviour
             FindObjectOfType<InMemoryVariableStorage>().SetValue("$held_item", itemName);
             FindObjectOfType<InteractableDescription>().Hide();
             gameObject.SetActive(false);
+            FindObjectOfType<SoundManager>().PlayItemPickupSFX();
         }
     }
 }
