@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == StringLiterals.TenementScene)
         {
-            var sp = GameObject.FindGameObjectWithTag(StringLiterals.PlayerStatePositionsTag).GetComponent<PlayerStatePosition>();
+            var sp = GameObject.FindGameObjectWithTag(StringLiterals.PlayerStatePositionsTag).GetComponent<SetupTenementScene>();
             //character controller issue would reset player position, fixed here https://forum.unity.com/threads/does-transform-position-work-on-a-charactercontroller.36149/#post-4132021
             charController.enabled = false;
             transform.position = sp.GetPosition();

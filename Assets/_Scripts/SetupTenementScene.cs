@@ -7,14 +7,26 @@ using UnityEngine.SceneManagement;
  *  This class handles setting the players postion and facing
  *  direction based on whatever state the player entered the scene at
  */
-public class PlayerStatePosition : MonoBehaviour
+public class SetupTenementScene : MonoBehaviour
 {
     public List<Transform> playerStatePositions;    // list of positions of various states 
     public GameObject player;
+    public GameObject hame;
+
+    private void Awake()
+    {
+        if(GameManager.Instance.gameState == GameState.HAME)
+        {
+            hame.SetActive(true);
+        }
+        else
+        {
+            hame.SetActive(false);
+        }
+    }
 
     private void Start()
     {
-        Debug.Log("-------------------"+GameManager.Instance.gameState);
         foreach (Transform position in playerStatePositions)
         {
             position.gameObject.GetComponent<Renderer>().enabled = false;

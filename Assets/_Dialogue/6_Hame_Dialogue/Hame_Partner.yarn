@@ -1,5 +1,36 @@
 title: Wife
 tags:
 ---
-Wife@Welcome back. #line:06e428d
+[[Wife: Hullo.|Wife.2Scots]]
+[[Wife: Hello|Wife.2English]]
+===
+
+title: Wife.2Scots
+tags:
+---
+Wife@Hullo
+[[Glen: It's guid tae be hame.|Wife.3Scots]]
+[[Glen: It's good to be home|Wife.3English]]
+===
+title: Wife.2English
+tags:
+---
+Wife@Hello
+[[Glen: It's guid tae be hame.|Wife.3Scots]]
+[[Glen: It's good to be home|Wife.3English]]
+===
+
+title: Wife.3Scots
+tags:
+---
+Glen@It's guid tae be hame.
+<<wait 3>>
+<<showHameText HameManager>>
+===
+title: Wife.3English
+tags:
+---
+Glen@It's good to be home.
+<<wait 3>>
+<<showHomeText HameManager>>
 ===
