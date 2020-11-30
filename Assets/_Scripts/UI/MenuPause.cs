@@ -30,10 +30,6 @@ public class MenuPause : MonoBehaviour
                 
             }
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            FindObjectOfType<SceneTransitionManager>().LoadScene(SceneManager.GetActiveScene().name);
-        }
     }
 
     public void ShowPauseMenu()

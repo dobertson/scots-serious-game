@@ -50,7 +50,7 @@ public class Scuil1Manager : MonoBehaviour
     public void LeaveScene()
     {
         GameManager.Instance.gameState = GameState.PALS;
-        FindObjectOfType<SceneTransitionManager>().LoadScene(StringLiterals.TenementScene);
+        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
     }
 
     #endregion

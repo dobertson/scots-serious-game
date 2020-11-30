@@ -14,6 +14,6 @@ public class Scuil2Manager : MonoBehaviour
     public void NextScene()
     {
         GameManager.Instance.gameState = GameState.JOAB;
-        FindObjectOfType<SceneTransitionManager>().LoadScene(StringLiterals.TenementScene);
+        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
     }
 }

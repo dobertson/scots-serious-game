@@ -114,14 +114,8 @@ public class LoadNarrativeScene : MonoBehaviour
         {
             var soundManager = GameObject.FindGameObjectWithTag("SoundManager");
             soundManager.GetComponent<SoundManager>().PlayDoorOpeningSFX();
-            StartCoroutine(WaitForSound(soundManager.GetComponent<SoundManager>().GetComponent<AudioSource>()));
+            FindObjectOfType<SceneTransitionManager>().FadeToScene(sceneName);
         }
-    }
-
-    public IEnumerator WaitForSound(AudioSource audiosource)
-    {
-        yield return new WaitUntil(() => audiosource.isPlaying == false);
-        FindObjectOfType<SceneTransitionManager>().LoadScene(sceneName);
     }
 
     private bool IsCloseEnough()
