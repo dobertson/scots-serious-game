@@ -464,7 +464,13 @@ namespace Yarn.Unity {
                 Debug.LogWarning("An option was selected, but the dialogue UI was not expecting it.");
                 return;
             }
-            CreateLine("Glen", lineID, optionText);
+            // during hame scene, player is in control of both characters dialogue options.
+            // when choosing dialogue options, normally text from the options player chooses becames a 
+            // line in the dialogue. the check here will prevent that during the hame scene
+            if (GameManager.Instance.gameState != GameState.HAME)
+            {
+                CreateLine("Glen", lineID, optionText);
+            }
             currentOptionSelectionHandler?.Invoke(optionID);
             waitingForOptionSelection = false;
         }
