@@ -56,12 +56,12 @@ GameObject:
   - component: {fileID: 8565527818077732353}
   - component: {fileID: 6646829822767771347}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Black Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6139248730517821605
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,9 +1,14 @@
-title: Scuil2.Pal
+title: Scuil2.Teacher
 tags:
 ---
-Pal@haw haw haw chatting shit. #line:0ea0d49
-<<lookAtTeacher Scuil2Manager>>
-Teacher@Here you don't be cheeky
-Glen@Eat my cheek.
+Teacher@Blah blah blah rabbie burns
+<<enablePoemPickUp Scuil2Manager>>
+===
+title: Scuil2.Pal
+tags: 
+---
+Pal@This is pish
+<<teacherInterrupts Scuil2Manager>>
+Teacher@Stop talking!
 <<nextScene Scuil2Manager>>
 ===

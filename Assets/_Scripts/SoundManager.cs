@@ -6,7 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     private AudioSource source;
     public AudioClip doorOpeningSFX;
-    public AudioClip pickUpSFX;
+    public AudioClip pickUpItemSFX;
+    public AudioClip notePickUpSFX;
     public AudioClip popSFX;
     public AudioClip ballKickSFX;
 
@@ -24,7 +25,13 @@ public class SoundManager : MonoBehaviour
 
     public void PlayItemPickupSFX()
     {
-        source.clip = pickUpSFX;
+        source.clip = pickUpItemSFX;
+        source.Play();
+    }
+
+    public void PlayNotePickupSFX()
+    {
+        source.clip = notePickUpSFX;
         source.Play();
     }
 
