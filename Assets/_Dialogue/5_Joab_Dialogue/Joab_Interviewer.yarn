@@ -1,6 +1,25 @@
 title: Joab.Interviewer
 tags:
 ---
-Interviewer@Hullo. #line:09c2d03
+<<set $scotsUse to 0>>
+Interviewer@Hello. #line:09c2d03
+	-> Awryt
+		<<set $scotsUse to $scotsUse + 1>>
+	-> Hello
+Interviewer@Great chat, we'll let you know.
+<<fadeToBlack JoabManager>>
+===
+title: Joab.Result
+tags:
+---
+Receptionist@Hi calling about the job.
+<<if $scotsUse > 0>>
+	Receptionist@You've not go the job, I'm sorry
+		-> Okay...
+<<else>>
+	Receptionist@You've got the job, I'm sorry
+		-> Yay!
+<<endif>>
+<<wait 2>>
 <<nextScene JoabManager>>
 ===

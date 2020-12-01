@@ -8,11 +8,13 @@ public class SceneTransitionManager : MonoBehaviour
 {
     private string sceneToLoad;
     private bool fadeToBlack;
+    private bool shouldLoadScene;
     public Image blackOverlay;
 
     private void Start()
     {
         fadeToBlack = false;
+        shouldLoadScene = false;
         blackOverlay.color = new Color(     // ensure black overlay is transparent on play
                 blackOverlay.color.r,
                 blackOverlay.color.g,
@@ -33,7 +35,14 @@ public class SceneTransitionManager : MonoBehaviour
 
             if (blackOverlay.color.a >= 1f)
             {
-                LoadScene(sceneToLoad);
+                if (shouldLoadScene)
+                {
+                    LoadScene(sceneToLoad);
+                }
+                else
+                {
+                    fadeToBlack = false;
+                }
             }
         }
     }
@@ -54,9 +63,16 @@ public class SceneTransitionManager : MonoBehaviour
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
+    public void FadeToBlack()
+    {
+        fadeToBlack = true;
+        blackOverlay.gameObject.SetActive(true);
+    }
+
     public void FadeToScene(string sceneName)
     {
         fadeToBlack = true;
+        shouldLoadScene = true;
         sceneToLoad = sceneName;
         blackOverlay.gameObject.SetActive(true);
     }
