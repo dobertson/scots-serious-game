@@ -9,9 +9,14 @@ public class FaimlyManager : MonoBehaviour
 {
     public GameObject bunnetOnHead; // when player finds the bunnet, activate this
 
-    private void Start()
+    private InMemoryVariableStorage dialogueVariables;
+    private SceneTransitionManager sceneTransitionManager;
+
+    private void Awake()
     {
         bunnetOnHead.SetActive(false); //ensure it's inactive at start
+        dialogueVariables = FindObjectOfType<InMemoryVariableStorage>();
+        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
     // when dad asks you find his "bunnet", enable the collider
@@ -39,7 +44,7 @@ public class FaimlyManager : MonoBehaviour
     [YarnCommand("clearHeldItem")]
     public void ClearHeldItem()
     {
-        FindObjectOfType<InMemoryVariableStorage>().SetValue("$held_item", "");
+        dialogueVariables.SetValue("$held_item", "");
     }
 
     // end of dialogue,
@@ -48,6 +53,6 @@ public class FaimlyManager : MonoBehaviour
     public void EndScene()
     {
         GameManager.Instance.gameState = GameState.SCUIL_1;
-        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
+        sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 }

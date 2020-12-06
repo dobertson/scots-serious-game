@@ -7,7 +7,10 @@ public class ContextNote : MonoBehaviour
     public GameState showNoteOnState;
     private Outline outline;
 
-    private void Start()
+    private ShowContextNote showContextNote;
+    private InteractableDescription interactableDescription;
+
+    private void Awake()
     {
         if(showNoteOnState != GameManager.Instance.gameState)
         {
@@ -16,15 +19,18 @@ public class ContextNote : MonoBehaviour
 
         outline = GetComponent<Outline>();
         outline.enabled = false;
+
+        showContextNote = FindObjectOfType<ShowContextNote>();
+        interactableDescription = FindObjectOfType<InteractableDescription>();
     }
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+        if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            FindObjectOfType<ShowContextNote>().ShowText(noteText);
+            showContextNote.ShowText(noteText);
             gameObject.SetActive(false);
-            FindObjectOfType<InteractableDescription>().Hide();
+            interactableDescription.Hide();
         }
     }
 

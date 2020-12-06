@@ -6147,6 +6147,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5299068522143778509, guid: 2592c60fc6eedb14882ada595bf3e7d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: ScrollArea
+      objectReference: {fileID: 0}
     - target: {fileID: 5299068522203233715, guid: 2592c60fc6eedb14882ada595bf3e7d2,
         type: 3}
       propertyPath: defaultVariables.Array.size
@@ -6200,6 +6205,11 @@ PrefabInstance:
     - target: {fileID: 5299068522762780967, guid: 2592c60fc6eedb14882ada595bf3e7d2,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6658894353213123285, guid: 2592c60fc6eedb14882ada595bf3e7d2,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6808079705532274888, guid: 2592c60fc6eedb14882ada595bf3e7d2,

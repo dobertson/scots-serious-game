@@ -51,7 +51,7 @@ public class NPC : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+        if (GameManager.IsPlayerCloseEnough(transform.position))
         {
             if (!string.IsNullOrEmpty(talkToNode))
             {

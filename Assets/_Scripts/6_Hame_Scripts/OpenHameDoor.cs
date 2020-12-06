@@ -6,23 +6,28 @@ using UnityEngine;
  */
 public class OpenHameDoor : MonoBehaviour
 {
-    private void Start()
+    private InteractableDescription interactableDescription;
+    private SoundManager soundManager;
+
+    private void Awake()
     {
         // interactable only if on final game state
         if(GameManager.Instance.gameState != GameState.HAME)
         {
             GetComponent<Collider>().enabled = false;
         }
+
+        interactableDescription = FindObjectOfType<InteractableDescription>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     // if player is close, play door sfx, wait for it to finish, then disable the door
     private void OnMouseDown()
     {
-        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+        if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            var soundManager = GameObject.FindGameObjectWithTag("SoundManager");
-            soundManager.GetComponent<SoundManager>().PlayDoorOpeningSFX();
-            StartCoroutine(WaitForSound(soundManager.GetComponent<SoundManager>().GetComponent<AudioSource>()));
+            soundManager.PlayDoorOpeningSFX();
+            StartCoroutine(WaitForSound(soundManager.GetComponent<AudioSource>()));
         }
     }
 
@@ -30,7 +35,7 @@ public class OpenHameDoor : MonoBehaviour
     public IEnumerator WaitForSound(AudioSource audiosource)
     {
         yield return new WaitUntil(() => audiosource.isPlaying == false);
-        FindObjectOfType<InteractableDescription>().Hide(); // ensure this is hidden after disabling door
+        interactableDescription.Hide(); // ensure this is hidden after disabling door
         gameObject.SetActive(false);
     }
 }

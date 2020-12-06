@@ -14,14 +14,25 @@ public class Scuil1Manager : MonoBehaviour
     private int index = 0;
     private int wordsInBox = 0;
 
-    private void Start()
+    private SceneTransitionManager sceneTransitionManager;
+    private SoundManager soundManager;
+    private DialogueRunner dialogueRunner;
+    private PlayerController playerController;
+
+    private void Awake()
     {
         playerThoughtBubble.enabled = false;
         foreach (GameObject word in words)
         {
             word.SetActive(false);
         }
+
+        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
+        soundManager = FindObjectOfType<SoundManager>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+        playerController = FindObjectOfType<PlayerController>();
     }
+
     #region Yarn Commands
 
     [YarnCommand("startWordGame")]
@@ -50,7 +61,7 @@ public class Scuil1Manager : MonoBehaviour
     public void LeaveScene()
     {
         GameManager.Instance.gameState = GameState.PALS;
-        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
+        sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 
     #endregion
@@ -66,7 +77,7 @@ public class Scuil1Manager : MonoBehaviour
         if(index < words.Count)
         {
             words[index].SetActive(true);
-            FindObjectOfType<SoundManager>().PlayPopSFX();
+            soundManager.PlayPopSFX();
         }
         else
         {
@@ -79,7 +90,7 @@ public class Scuil1Manager : MonoBehaviour
         wordsInBox++;
         if (wordsInBox == 21)
         {
-            FindObjectOfType<DialogueRunner>().StartDialogue("Teacher.EndOfClass");
+            dialogueRunner.StartDialogue("Teacher.EndOfClass");
         }
     }
 
@@ -89,6 +100,6 @@ public class Scuil1Manager : MonoBehaviour
     IEnumerator DisableMovement()
     {
         yield return new WaitForEndOfFrame();
-        FindObjectOfType<PlayerController>().DisablePlayerMovement();
+        playerController.DisablePlayerMovement();
     }
 }

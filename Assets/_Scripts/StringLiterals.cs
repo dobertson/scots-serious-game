@@ -20,4 +20,11 @@ public static class StringLiterals
     public static string WordBoxTag = "WordBox";
     public static string DadItemTag = "DadItem";
     public static string PlayerStatePositionsTag = "PlayerStatePositions";
+    public static string ScrollAreaTag = "ScrollArea";
+
+
+    public static string FadeToBlackTag = "FadeToBlack";
+    public static string ContextNoteTag = "ContextNote";
+    public static string DialogueContainerTag = "DialogueContainer";
+    public static string EndingSceneTag = "EndingScene";
 }

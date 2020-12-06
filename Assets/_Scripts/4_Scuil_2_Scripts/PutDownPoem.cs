@@ -6,9 +6,17 @@ public class PutDownPoem : MonoBehaviour
 {
     public GameObject poemOnTable; //ref to other poem gameobejct to enable when putting this down
 
+    private InteractableDescription interactableDescription;
+    private SoundManager soundManager;
+    private Scuil2Manager scuil2Manager;
+
     void Awake()
     {
         GetComponent<Collider>().enabled = false; // ensure you can't put poem down immediately 
+
+        interactableDescription = FindObjectOfType<InteractableDescription>();
+        soundManager = FindObjectOfType<SoundManager>();
+        scuil2Manager = FindObjectOfType<Scuil2Manager>();
     }
 
     private void Start()
@@ -28,9 +36,9 @@ public class PutDownPoem : MonoBehaviour
     {
         poemOnTable.SetActive(true);
         poemOnTable.transform.GetChild(0).GetComponent<Collider>().enabled = false;
-        FindObjectOfType<InteractableDescription>().Hide();
-        FindObjectOfType<SoundManager>().PlayNotePickupSFX();
-        FindObjectOfType<Scuil2Manager>().StartTalkingToPal();
+        interactableDescription.Hide();
+        soundManager.PlayNotePickupSFX();
+        scuil2Manager.StartTalkingToPal();
         transform.parent.gameObject.SetActive(false);
     }
 }

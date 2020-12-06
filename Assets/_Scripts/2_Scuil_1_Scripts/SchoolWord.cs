@@ -9,6 +9,9 @@ public class SchoolWord : MonoBehaviour
     public bool isCorrectWord;
     public string yarnNode;
 
+    private DialogueRunner dialogueRunner;
+    private Scuil1Manager scuil1Manager;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,6 +25,9 @@ public class SchoolWord : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<Rigidbody>().useGravity = false;
         GetComponent<Collider>().isTrigger = true;
+
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+        scuil1Manager = FindObjectOfType<Scuil1Manager>();
     }
 
     // Update is called once per frame
@@ -53,14 +59,14 @@ public class SchoolWord : MonoBehaviour
         {
             if(!string.IsNullOrEmpty(yarnNode))
             {
-                FindObjectOfType<DialogueRunner>().StartDialogue(yarnNode);
+                dialogueRunner.StartDialogue(yarnNode);
             }
 
             if(!isCorrectWord)
             {
-                FindObjectOfType<Scuil1Manager>().SetTeacherCorrectionWord(actualCorrectWord);
+                scuil1Manager.SetTeacherCorrectionWord(actualCorrectWord);
             }
-            FindObjectOfType<Scuil1Manager>().IsWordGameOver();
+            scuil1Manager.IsWordGameOver();
             gameObject.SetActive(false);
         }
         

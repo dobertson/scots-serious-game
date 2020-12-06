@@ -9,12 +9,16 @@ public class HameManager : MonoBehaviour
     public GameObject hameText;
     public GameObject homeText;
 
+    private SceneTransitionManager sceneTransitionManager;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         endingTextContainer.SetActive(false);
         hameText.SetActive(false);
         homeText.SetActive(false);
+
+        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class HameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(20f);
         GameManager.Instance.gameState = GameState.MAIN_MENU;
-        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
+        sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 
     [YarnCommand("showHameText")]

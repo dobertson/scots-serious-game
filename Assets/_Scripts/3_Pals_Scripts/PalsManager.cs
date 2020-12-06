@@ -5,10 +5,17 @@ using Yarn.Unity;
 
 public class PalsManager : MonoBehaviour
 {
+    private SceneTransitionManager sceneTransitionManager;
+
+    private void Awake()
+    {
+        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
+    }
+
     [YarnCommand("nextScene")]
     public void NextScene()
     {
         GameManager.Instance.gameState = GameState.SCUIL_2;
-        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
+        sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 }

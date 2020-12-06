@@ -18,7 +18,7 @@ public class Interactable : MonoBehaviour
     {
         if (isShowingDescription)
         {
-            if (!GameManager.Instance.IsPlayerCloseEnough(transform.position))
+            if (!GameManager.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Hide();
                 isShowingDescription = false;
@@ -30,7 +30,7 @@ public class Interactable : MonoBehaviour
     {
         if (!isShowingDescription)
         {
-            if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+            if (GameManager.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Show(description);
                 isShowingDescription = true;

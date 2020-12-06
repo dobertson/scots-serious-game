@@ -75,7 +75,7 @@ public class LoadNarrativeScene : MonoBehaviour
     {
         if (isShowingDescription)
         {
-            if (!GameManager.Instance.IsPlayerCloseEnough(transform.position))
+            if (!GameManager.IsPlayerCloseEnough(transform.position))
             {
                 FindObjectOfType<InteractableDescription>().Hide();
                 isShowingDescription = false;

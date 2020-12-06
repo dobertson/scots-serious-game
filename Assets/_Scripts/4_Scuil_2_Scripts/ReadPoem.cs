@@ -6,6 +6,15 @@ public class ReadPoem : MonoBehaviour
 {
     public GameObject closeUpPoem;
 
+    private SoundManager soundManager;
+    private InteractableDescription interactableDescription;
+
+    private void Awake()
+    {
+        soundManager = FindObjectOfType<SoundManager>();
+        interactableDescription = FindObjectOfType<InteractableDescription>();
+    }
+
     private void Start()
     {
         closeUpPoem.SetActive(false);
@@ -13,8 +22,8 @@ public class ReadPoem : MonoBehaviour
 
     private void OnMouseDown()
     {
-        FindObjectOfType<SoundManager>().PlayNotePickupSFX();
-        FindObjectOfType<InteractableDescription>().Hide();
+        soundManager.PlayNotePickupSFX();
+        interactableDescription.Hide();
         closeUpPoem.SetActive(true);
     }
 }

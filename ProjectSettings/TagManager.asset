@@ -13,6 +13,11 @@ TagManager:
   - WordBox
   - PlayerStatePositions
   - SoundManager
+  - ScrollArea
+  - FadeToBlack
+  - ContextNote
+  - DialogueContainer
+  - EndingScene
   layers:
   - Default
   - TransparentFX

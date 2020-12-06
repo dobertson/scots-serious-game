@@ -24,7 +24,7 @@ public class SitDownStartDialogue : MonoBehaviour
     void OnMouseDown()
     {
         // if player is close enough to sit
-        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+        if (GameManager.IsPlayerCloseEnough(transform.position))
         {
             FindObjectOfType<PlayerController>().DisablePlayerMovement();       // disable movement
             playerMove.transform.position = sittingPosition.position;           // set positions

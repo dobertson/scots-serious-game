@@ -8,10 +8,22 @@ public class Scuil2Manager : MonoBehaviour
     public Transform lookAtPalPos;
     public GameObject poemOnTable;
 
+    private DialogueRunner dialogueRunner;
+    private SceneTransitionManager sceneTransitionManager;
+    private PlayerLook playerLook;
+
+    private void Awake()
+    { 
+        poemOnTable.GetComponent<Collider>().enabled = false;
+
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
+        playerLook = FindObjectOfType<PlayerLook>();
+    }
+
     private void Start()
     {
-        poemOnTable.GetComponent<Collider>().enabled = false;
-        FindObjectOfType<DialogueRunner>().StartDialogue("Scuil2.Teacher"); //start teacher dialogue
+        dialogueRunner.StartDialogue("Scuil2.Teacher"); //start teacher dialogue
     }
 
     [YarnCommand("enablePoemPickUp")]
@@ -23,14 +35,14 @@ public class Scuil2Manager : MonoBehaviour
     [YarnCommand("teacherInterrupts")]
     public void TeacherInterrupts()
     {
-        FindObjectOfType<PlayerLook>().transform.LookAt(lookAtTeacherPos);
+        playerLook.transform.LookAt(lookAtTeacherPos);
     }
 
     [YarnCommand("nextScene")]
     public void NextScene()
     {
         GameManager.Instance.gameState = GameState.JOAB;
-        FindObjectOfType<SceneTransitionManager>().FadeToScene(StringLiterals.TenementScene);
+        sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 
     public void StartTalkingToPal()
@@ -41,7 +53,7 @@ public class Scuil2Manager : MonoBehaviour
     IEnumerator StartConvo()
     {
         yield return new WaitForSeconds(2f);
-        FindObjectOfType<PlayerLook>().transform.LookAt(lookAtPalPos);
-        FindObjectOfType<DialogueRunner>().StartDialogue("Scuil2.Pal");
+        playerLook.transform.LookAt(lookAtPalPos);
+        dialogueRunner.StartDialogue("Scuil2.Pal");
     }
 }

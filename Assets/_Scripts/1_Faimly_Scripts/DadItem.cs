@@ -7,20 +7,28 @@ public class DadItem : MonoBehaviour
 {
     public string itemName;
 
+    private InMemoryVariableStorage dialgoueVariables;
+    private InteractableDescription interactableDescription;
+    private SoundManager soundManager;
+
     private void Awake()
     {
         tag = StringLiterals.DadItemTag;
         GetComponent<Collider>().enabled = false;
+
+        dialgoueVariables = FindObjectOfType<InMemoryVariableStorage>();
+        interactableDescription = FindObjectOfType<InteractableDescription>();
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void OnMouseDown()
     {
-        if (GameManager.Instance.IsPlayerCloseEnough(transform.position))
+        if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            FindObjectOfType<InMemoryVariableStorage>().SetValue("$held_item", itemName);
-            FindObjectOfType<InteractableDescription>().Hide();
+            dialgoueVariables.SetValue("$held_item", itemName);
+            interactableDescription.Hide();
             gameObject.SetActive(false);
-            FindObjectOfType<SoundManager>().PlayItemPickupSFX();
+            soundManager.PlayItemPickupSFX();
         }
     }
 }

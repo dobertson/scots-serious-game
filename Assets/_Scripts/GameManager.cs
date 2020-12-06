@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     // used to determine if player is close enough to an object to
     // interact with it, talk to NPC or load new scene
-    public bool IsPlayerCloseEnough(Vector3 objectPosition)
+    public static bool IsPlayerCloseEnough(Vector3 objectPosition)
     {
         var minumDistance = 4f;
         var playerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;

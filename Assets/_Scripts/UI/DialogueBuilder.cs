@@ -9,7 +9,7 @@ public class DialogueBuilder : MonoBehaviour
     public GameObject dialogueLinePrefab;
     public GameObject speakerPrefab;
     public string currentlySpeaking;
-   
+
     public void CreateText(string speaker, string lineID, string lineText, string lineTextTranslated, bool optionLine = false)
     {
         if (!speaker.Equals(currentlySpeaking))
@@ -34,7 +34,9 @@ public class DialogueBuilder : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         Canvas.ForceUpdateCanvases();
-        FindObjectOfType<ScrollRect>().verticalNormalizedPosition = 0;
+        GameObject.FindGameObjectWithTag(StringLiterals.ScrollAreaTag)
+            .GetComponent<ScrollRect>()
+            .verticalNormalizedPosition = 0;
     }
 
     public void ClearText()
