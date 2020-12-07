@@ -26,13 +26,13 @@ public class LoadNarrativeScene : MonoBehaviour
                 sceneName = StringLiterals.FaimlyScene;
                 break;
             case (GameState.SCUIL_1):
-                sceneName = StringLiterals.ScuilScene;
+                sceneName = StringLiterals.Scuil1Scene;
                 break;
             case (GameState.PALS):
                 sceneName = StringLiterals.PalsScene;
                 break;
             case (GameState.SCUIL_2):
-                sceneName = StringLiterals.BackEtTheScuilScene;
+                sceneName = StringLiterals.Scuil2Scene;
                 break;
             case (GameState.JOAB):
                 sceneName = StringLiterals.JoabScene;
@@ -47,13 +47,13 @@ public class LoadNarrativeScene : MonoBehaviour
 
         // disable collider (and thus ability to enter door)
         // if player is not at this game state yet
-        if (GameManager.Instance.gameState < openOnState)
+        if (GameManager.gameState < openOnState)
         {
             GetComponent<Collider>().enabled = false;
         }
 
-        if (GameManager.Instance.gameState == openOnState
-            || (GameManager.Instance.gameState == GameState.MAIN_MENU && openOnState == GameState.FAIMLY))
+        if (GameManager.gameState == openOnState
+            || (GameManager.gameState == GameState.MAIN_MENU && openOnState == GameState.FAIMLY))
         {
             description = $"Enter '{roomName}' memory?";
         }

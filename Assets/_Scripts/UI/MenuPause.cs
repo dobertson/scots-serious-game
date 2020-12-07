@@ -22,7 +22,7 @@ public class MenuPause : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.gameState != GameState.MAIN_MENU 
+        if (GameManager.gameState != GameState.MAIN_MENU 
             || SceneManager.GetActiveScene().name != StringLiterals.TenementScene)
         {
             if (Input.GetKeyDown(KeyCode.Escape))

@@ -15,7 +15,6 @@ public class MenuMain : MonoBehaviour
 
     public void Start()
     {
-        // if game state is main menu, show main menu
         mainMenuContainer.SetActive(true);
         controlsContainer.SetActive(false);
         player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
@@ -50,7 +49,7 @@ public class MenuMain : MonoBehaviour
     // when player clicks Enter on main menu
     public void EnterBuilding()
     { 
-        GameManager.Instance.gameState = GameState.FAIMLY;  // change state to first scene
+        GameManager.gameState = GameState.FAIMLY;  // change state to first scene
         mainMenuContainer.SetActive(false);                 // disable main menu ui 
         mainMenuDoor.SetActive(false);                      // disable building door
         isPlayerEntering = true;                            // set bool so Update() can move player into building

@@ -39,7 +39,7 @@ public class HameManager : MonoBehaviour
     IEnumerator ReturnToMainMenu()
     {
         yield return new WaitForSeconds(20f);
-        GameManager.Instance.gameState = GameState.MAIN_MENU;
+        GameManager.gameState = GameState.MAIN_MENU;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 

@@ -14,7 +14,7 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
-    public GameState gameState;
+    public static GameState gameState;
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
 

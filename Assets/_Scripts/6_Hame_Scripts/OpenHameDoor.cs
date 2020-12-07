@@ -12,7 +12,7 @@ public class OpenHameDoor : MonoBehaviour
     private void Awake()
     {
         // interactable only if on final game state
-        if(GameManager.Instance.gameState != GameState.HAME)
+        if(GameManager.gameState != GameState.HAME)
         {
             GetComponent<Collider>().enabled = false;
         }

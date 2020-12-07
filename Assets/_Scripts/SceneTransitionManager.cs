@@ -25,6 +25,8 @@ public class SceneTransitionManager : MonoBehaviour
 
     public void Update()
     {
+        ChangeStateDEBUG();
+
         if (fadeToBlack)
         {
             blackOverlay.color = new Color(
@@ -44,6 +46,40 @@ public class SceneTransitionManager : MonoBehaviour
                     fadeToBlack = false;
                 }
             }
+        }
+    }
+
+    private void ChangeStateDEBUG()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GameManager.gameState = GameState.FAIMLY;
+            LoadScene(StringLiterals.FaimlyScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GameManager.gameState = GameState.FAIMLY;
+            LoadScene(StringLiterals.Scuil1Scene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            GameManager.gameState = GameState.FAIMLY;
+            LoadScene(StringLiterals.PalsScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            GameManager.gameState = GameState.FAIMLY;
+            LoadScene(StringLiterals.Scuil2Scene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            GameManager.gameState = GameState.FAIMLY;
+            LoadScene(StringLiterals.JoabScene);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            GameManager.gameState = GameState.HAME;
+            LoadScene(StringLiterals.TenementScene);
         }
     }
 

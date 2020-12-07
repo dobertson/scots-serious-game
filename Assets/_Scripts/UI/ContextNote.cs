@@ -12,7 +12,7 @@ public class ContextNote : MonoBehaviour
 
     private void Awake()
     {
-        if(showNoteOnState != GameManager.Instance.gameState)
+        if(showNoteOnState != GameManager.gameState)
         {
             gameObject.SetActive(false);
         }

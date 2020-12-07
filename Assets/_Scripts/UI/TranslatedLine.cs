@@ -20,7 +20,7 @@ public class TranslatedLine : MonoBehaviour
     void Update()
     {
         // move text with mouse cursor
-        transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0) + offset;
+        //transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0) + offset;
     }
 
     public void Show(string text)

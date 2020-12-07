@@ -18,7 +18,7 @@ public class JoabManager : MonoBehaviour
     [YarnCommand("nextScene")]
     public void NextScene()
     {
-        GameManager.Instance.gameState = GameState.HAME;
+        GameManager.gameState = GameState.HAME;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 

@@ -15,7 +15,7 @@ public class PalsManager : MonoBehaviour
     [YarnCommand("nextScene")]
     public void NextScene()
     {
-        GameManager.Instance.gameState = GameState.SCUIL_2;
+        GameManager.gameState = GameState.SCUIL_2;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 }

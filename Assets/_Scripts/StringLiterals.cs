@@ -6,9 +6,9 @@ public static class StringLiterals
 {
     public static string TenementScene = "0_Tenement";
     public static string FaimlyScene = "1_Faimly";
-    public static string ScuilScene = "2_Scuil1";
+    public static string Scuil1Scene = "2_Scuil1";
     public static string PalsScene = "3_Pals";
-    public static string BackEtTheScuilScene = "4_Scuil2";
+    public static string Scuil2Scene = "4_Scuil2";
     public static string JoabScene = "5_Joab";
     public static string HameScene = "6_Hame";
 
