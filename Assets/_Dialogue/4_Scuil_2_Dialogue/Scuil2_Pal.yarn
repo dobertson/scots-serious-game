@@ -1,14 +1,48 @@
 title: Scuil2.Teacher
 tags:
 ---
-Teacher@Blah blah blah rabbie burns
+Mr Hamilton@Good morning class!
+The class@G o o d  m o r n i n g  M r  H a m i l t o n .
+Mr Hamilton@It's that time of year again, Burns Night!
+Mr Hamilton@Rabbie Burns, bard of Ayrshire, the Ploughman Poet.
+Mr Hamilton@A national treasure.
+Mr Hamilton@You know the drill, every Burns Night each primary class has a competition for best peom recital.
+Mr Hamilton@There's shortbread and a bottle of irn bru for the winner!
+Mr Hamilton@Since this class is older, you get a more difficult poem from last year.
+Mr Hamilton@This year we are learning "Tae a moose".
+Mr Hamilton@Burns is said to have wrote the poem after destorying a mouses nest just before winter when he was out ploughing the fields. 
+Mr Hamilton@Burns' brother claimed he wrote it whilst still holding the plough
+Mr Hamilton@Right class, get learning!
 <<enablePoemPickUp Scuil2Manager>>
 ===
 title: Scuil2.Pal
 tags: 
 ---
-Pal@This is pish
+Connor@Hawl
+Connor@This is pish, a hate that wi hae tae dae this ivverie year.
+Connor@A mean, a kin read some o it, some o thae wirds leuk familiar, bit it jist leuks wrang et the same time.
 <<teacherInterrupts Scuil2Manager>>
-Teacher@Stop talking!
+Mr Hamilton@Glen!
+Mr Hamilton@Do you have something to share with the rest of the class?
+[[Naw, a wisnae talklin. | Scuil2.TeacherNotHappy]]			
+[[No, i wasn't talking. | Scuil2.TeacherTellOff]]
+===
+title: Scuil2.TeacherTellOff
+tags:
+---
+Mr Hamilton@Don't take me for being stupid.
+Mr Hamilton@Don't do it again, or you and Connor will be seperated.
+Mr Hamilton@Back to studying the poem.
 <<nextScene Scuil2Manager>>
+===
+title: Scuil2.TeacherNotHappy
+tags:
+---
+Mr Hamilton@Excuse me, say that again? 
+	-> It wisnae me, a wisnae talkin.
+		Mr Hamilton@Are you giving me cheek?
+		Mr Hamilton@I would like a word with you, get outside.
+	-> It wasn't me, I was not speaking.
+		[[Scuil2.TeacherTellOff]]	
+<<nextScene Scuil2Manager>>	
 ===
