@@ -15,14 +15,22 @@ public class MenuMain : MonoBehaviour
 
     public void Start()
     {
-        mainMenuContainer.SetActive(true);
-        controlsContainer.SetActive(false);
-        player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
-        player.GetComponent<PlayerController>().DisablePlayerMovement();
-        enteringPosition.position = new Vector3(
-            enteringPosition.position.x,
-            player.transform.position.y,    // set entering position to same height as player position to lock moving laong Y axis
-            enteringPosition.position.z);
+        if(GameManager.gameState == GameState.MAIN_MENU)
+        {
+            mainMenuContainer.SetActive(true);
+            controlsContainer.SetActive(false);
+            player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
+            player.GetComponent<PlayerController>().DisablePlayerMovement();
+            enteringPosition.position = new Vector3(
+                enteringPosition.position.x,
+                player.transform.position.y,    // set entering position to same height as player position to lock moving laong Y axis
+                enteringPosition.position.z);
+        }
+        else
+        {
+            mainMenuContainer.SetActive(false);
+            controlsContainer.SetActive(false);
+        }
     }
 
     private void Update()
