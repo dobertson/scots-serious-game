@@ -139,6 +139,21 @@ PrefabInstance:
       propertyPath: talkToNode
       value: Joab.Hello
       objectReference: {fileID: 0}
+    - target: {fileID: 2457676536604226016, guid: 7e4eb33523a15d54aa740f648d346554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18c179eec118dc440a61ca253d939709, type: 2}
+    - target: {fileID: 2457676536604226020, guid: 7e4eb33523a15d54aa740f648d346554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2de428be078dbaf4d985e74f00ee6f4d, type: 2}
+    - target: {fileID: 2457676536604226028, guid: 7e4eb33523a15d54aa740f648d346554,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 599f81167b2fed048affe6ddda60afd1, type: 2}
     - target: {fileID: 2457676536608362280, guid: 7e4eb33523a15d54aa740f648d346554,
         type: 3}
       propertyPath: m_Controller
@@ -148,6 +163,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Interviewer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457676536615795948, guid: 7e4eb33523a15d54aa740f648d346554,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457676536615795950, guid: 7e4eb33523a15d54aa740f648d346554,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2457676536615821446, guid: 7e4eb33523a15d54aa740f648d346554,
         type: 3}

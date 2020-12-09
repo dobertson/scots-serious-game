@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ContextNote : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class ContextNote : MonoBehaviour
     private ShowContextNote showContextNote;
     private InteractableDescription interactableDescription;
 
-    private void Awake()
+    private void Start()
     {
-        if(showNoteOnState != GameManager.gameState)
+        if(showNoteOnState != GameManager.Instance.gameState)
         {
             gameObject.SetActive(false);
         }
@@ -28,15 +29,25 @@ public class ContextNote : MonoBehaviour
     {
         if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            showContextNote.ShowText(noteText);
-            gameObject.SetActive(false);
-            interactableDescription.Hide();
+            // fix from https://answers.unity.com/questions/1130888/onmousedown-work-through-ui-elements.html
+            // when clicking the close button on UI, the click would go through a click the collider behind it,
+            // this would mean both notes would open in one click if they are next to each other
+            // this check fixes that
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                showContextNote.ShowText(noteText);
+                gameObject.SetActive(false);
+                interactableDescription.Hide();
+            }
         }
     }
 
     private void OnMouseEnter()
     {
-        outline.enabled = true;
+        if (GameManager.IsPlayerCloseEnough(transform.position))
+        {
+            outline.enabled = true;
+        }
     }
 
     private void OnMouseExit()

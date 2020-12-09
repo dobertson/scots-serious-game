@@ -6,9 +6,10 @@ using UnityEngine;
  */
 public class ShowContextNote : MonoBehaviour
 {
-    TextMeshProUGUI myText;
+    private TextMeshProUGUI myText;
     private AudioSource source;
     public GameObject noteContainer;
+    private PlayerController playerController;
 
     // Start is called before the first frame update
     void Awake()
@@ -17,11 +18,12 @@ public class ShowContextNote : MonoBehaviour
         myText = GameObject.FindGameObjectWithTag("NoteText").GetComponent<TextMeshProUGUI>();
         noteContainer.SetActive(false);
         source = GetComponent<AudioSource>();
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     public void ShowText(string noteText)
     {
-        FindObjectOfType<PlayerController>().DisablePlayerMovement();
+        playerController.DisablePlayerMovement();
         noteContainer.SetActive(true);
         myText.text = noteText;
         source.pitch = 1f;

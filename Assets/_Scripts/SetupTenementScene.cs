@@ -15,7 +15,7 @@ public class SetupTenementScene : MonoBehaviour
 
     private void Awake()
     {
-        if(GameManager.gameState == GameState.HAME)
+        if(GameManager.Instance.gameState == GameState.HAME)
         {
             hame.SetActive(true);
         }
@@ -40,10 +40,10 @@ public class SetupTenementScene : MonoBehaviour
 
     public Vector3 GetPosition()
     {
-        return playerStatePositions[(int)GameManager.gameState].position;
+        return playerStatePositions[(int)GameManager.Instance.gameState].position;
     }
     public Vector3 GetDirection()
     {
-        return playerStatePositions[(int)GameManager.gameState].forward;
+        return playerStatePositions[(int)GameManager.Instance.gameState].forward;
     }
 }

@@ -19,14 +19,14 @@ public class ScuilSceneManager : MonoBehaviour
     void Start()
     {
         var player = FindObjectOfType<PlayerMove>().transform;
-        if (GameManager.gameState == GameState.SCUIL_1)
+        if (GameManager.Instance.gameState == GameState.SCUIL_1)
         {
             scene1.SetActive(true);
             scene2.SetActive(false);
             player.transform.position = scene1StartingPos.position;
             player.transform.forward = scene1StartingPos.forward;
         }
-        else if (GameManager.gameState == GameState.SCUIL_2)
+        else if (GameManager.Instance.gameState == GameState.SCUIL_2)
         {
             scene1.SetActive(false);
             scene2.SetActive(true);

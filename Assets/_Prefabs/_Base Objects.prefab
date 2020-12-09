@@ -2426,11 +2426,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"The guid Scots tongue\u2026 a slovenly debased dialect\u2026 the Doric\u2026
-    corrupt English\u2026 artificial Lallans\u2026 uncouth gutturals\u2026 the National
-    Language\u2026 an unintelligible dialect of English\u2026 Braid Scots\u2026 coarse
-    slang\u2026 a language that never existed - every one of those terms and epithets
-    has been used to describe the language I was brought up to speak, Scots.\""
+  m_text: 'While the tiny aristocratic and industrial elite of the 19th century attempted
+    to educate their children in England or at English schools in Scotland, the mass
+    of working-class and probably middle-class people continued hearing and speaking
+    only Scots. For it was not until after the Scottish Education Act of 1872 that
+    any systematic attempt was made to teach spoken English in Scottish schools.
+    From then on Inspectors were able to institutionalise and enforce attitudes already
+    entrenched in society.
+
+    
+
+    This was the beginning of education appearing
+    as an alien imposition to many Scots, as their home language was systematically
+    devalued and banned from the school. The Inspectors reports are full of references
+    to the two-language split of school and playground'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7299c0886e9a6f048a6b1e5961eaf25c, type: 2}
   m_sharedMaterial: {fileID: 6608116991573912029, guid: 7299c0886e9a6f048a6b1e5961eaf25c,
@@ -2458,12 +2467,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.4
+  m_fontSize: 12.15
   m_fontSizeBase: 13.4
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 9
+  m_fontSizeMax: 13.52
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -3062,7 +3071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3142681873161978268
 RectTransform:
   m_ObjectHideFlags: 0

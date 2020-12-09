@@ -47,13 +47,13 @@ public class LoadNarrativeScene : MonoBehaviour
 
         // disable collider (and thus ability to enter door)
         // if player is not at this game state yet
-        if (GameManager.gameState < openOnState)
+        if (GameManager.Instance.gameState < openOnState)
         {
             GetComponent<Collider>().enabled = false;
         }
 
-        if (GameManager.gameState == openOnState
-            || (GameManager.gameState == GameState.MAIN_MENU && openOnState == GameState.FAIMLY))
+        if (GameManager.Instance.gameState == openOnState
+            || (GameManager.Instance.gameState == GameState.MAIN_MENU && openOnState == GameState.FAIMLY))
         {
             description = $"Enter '{roomName}' memory?";
         }

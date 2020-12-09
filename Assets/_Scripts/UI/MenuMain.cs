@@ -15,7 +15,7 @@ public class MenuMain : MonoBehaviour
 
     public void Start()
     {
-        if(GameManager.gameState == GameState.MAIN_MENU)
+        if(GameManager.Instance.gameState == GameState.MAIN_MENU)
         {
             mainMenuContainer.SetActive(true);
             controlsContainer.SetActive(false);
@@ -57,7 +57,7 @@ public class MenuMain : MonoBehaviour
     // when player clicks Enter on main menu
     public void EnterBuilding()
     { 
-        GameManager.gameState = GameState.FAIMLY;  // change state to first scene
+        GameManager.Instance.gameState = GameState.FAIMLY;  // change state to first scene
         mainMenuContainer.SetActive(false);                 // disable main menu ui 
         mainMenuDoor.SetActive(false);                      // disable building door
         isPlayerEntering = true;                            // set bool so Update() can move player into building

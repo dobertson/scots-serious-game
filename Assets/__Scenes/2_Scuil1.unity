@@ -3307,6 +3307,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 975073995}
     m_Modifications:
+    - target: {fileID: 2137108627089448453, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2de428be078dbaf4d985e74f00ee6f4d, type: 2}
+    - target: {fileID: 2137108627089448459, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 599f81167b2fed048affe6ddda60afd1, type: 2}
+    - target: {fileID: 2137108627089448463, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 18c179eec118dc440a61ca253d939709, type: 2}
     - target: {fileID: 2137108627093659849, guid: c4b254da88b1a7247943efde90abbaac,
         type: 3}
       propertyPath: m_Controller
@@ -3487,10 +3502,45 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.48221123
       objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947201, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947203, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2137108627100947213, guid: c4b254da88b1a7247943efde90abbaac,
         type: 3}
       propertyPath: m_Name
       value: Teacher
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947215, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947281, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947291, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947293, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137108627100947295, guid: c4b254da88b1a7247943efde90abbaac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2492119926204413950, guid: c4b254da88b1a7247943efde90abbaac,
         type: 3}

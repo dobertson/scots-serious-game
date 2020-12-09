@@ -15,7 +15,7 @@ public class SetUpMainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(GameManager.gameState == GameState.MAIN_MENU)
+        if(GameManager.Instance.gameState == GameState.MAIN_MENU)
         {
             mainMenu.SetActive(true);
         }

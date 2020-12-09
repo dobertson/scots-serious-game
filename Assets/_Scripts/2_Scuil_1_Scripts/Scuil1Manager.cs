@@ -60,7 +60,7 @@ public class Scuil1Manager : MonoBehaviour
     [YarnCommand("leaveScene")]
     public void LeaveScene()
     {
-        GameManager.gameState = GameState.PALS;
+        GameManager.Instance.gameState = GameState.PALS;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 

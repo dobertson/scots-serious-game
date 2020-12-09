@@ -467,7 +467,7 @@ namespace Yarn.Unity {
             // during hame scene, player is in control of both characters dialogue options.
             // when choosing dialogue options, normally text from the options player chooses becames a 
             // line in the dialogue. the check here will prevent that during the hame scene
-            if (GameManager.gameState != GameState.HAME)
+            if (GameManager.Instance.gameState != GameState.HAME)
             {
                 CreateLine("Glen", lineID, optionText);
             }

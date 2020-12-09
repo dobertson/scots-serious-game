@@ -52,7 +52,7 @@ public class FaimlyManager : MonoBehaviour
     [YarnCommand("endScene")]
     public void EndScene()
     {
-        GameManager.gameState = GameState.SCUIL_1;
+        GameManager.Instance.gameState = GameState.SCUIL_1;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 }
