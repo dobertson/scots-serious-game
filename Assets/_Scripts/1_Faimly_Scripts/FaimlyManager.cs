@@ -8,9 +8,11 @@ using Yarn.Unity;
 public class FaimlyManager : MonoBehaviour
 {
     public GameObject bunnetOnHead; // when player finds the bunnet, activate this
+    public bool canPickUpItem;
 
     private InMemoryVariableStorage dialogueVariables;
     private SceneTransitionManager sceneTransitionManager;
+    private GameObject[] dadItems;
 
     private void Awake()
     {
@@ -19,15 +21,27 @@ public class FaimlyManager : MonoBehaviour
         sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
+    private void Start()
+    {
+        // dad items have their tags set in an Awake function on another script
+        // do this in Start to ensure it finds then after tag has been set
+        dadItems = GameObject.FindGameObjectsWithTag(StringLiterals.DadItemTag);
+
+        foreach (GameObject item in dadItems)
+        {
+            item.GetComponent<Collider>().enabled = false;
+        }
+    }
+
     // when dad asks you find his "bunnet", enable the collider
     // for each of the objecs so that user can pick them up 
     // to progress in the scene
     [YarnCommand("enableDadItems")]
     public void EnableDadItems()
     {
-        var items = GameObject.FindGameObjectsWithTag(StringLiterals.DadItemTag);
+        canPickUpItem = true;
 
-        foreach (GameObject item in items)
+        foreach (GameObject item in dadItems)
         {
             item.GetComponent<Collider>().enabled = true;
         }
@@ -45,6 +59,8 @@ public class FaimlyManager : MonoBehaviour
     public void ClearHeldItem()
     {
         dialogueVariables.SetValue("$held_item", "");
+        ResetDadItems();
+        canPickUpItem = true;
     }
 
     // end of dialogue,
@@ -54,5 +70,25 @@ public class FaimlyManager : MonoBehaviour
     {
         GameManager.Instance.gameState = GameState.SCUIL_1;
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
+    }
+
+    public void ResetDadItems()
+    {
+        // reset the pickup 
+        foreach (GameObject item in dadItems)
+        {
+            item.GetComponent<Interactable>().description = "Pick up";
+            item.GetComponent<DadItem>().enabled = true;
+        }
+    }
+
+    public void PreventDadItemPickup()
+    {
+        canPickUpItem = false;
+        // reset the pickup 
+        foreach (GameObject item in dadItems)
+        {
+            item.GetComponent<Interactable>().description = "Ye cannae haud mair than wan hing";
+        }
     }
 }

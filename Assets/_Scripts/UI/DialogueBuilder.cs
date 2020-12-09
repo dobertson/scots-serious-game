@@ -16,7 +16,7 @@ public class DialogueBuilder : MonoBehaviour
         {
             currentlySpeaking = speaker;
             var newSpeaker = Instantiate(speakerPrefab, textArea);
-            newSpeaker.GetComponent<TextMeshProUGUI>().text = currentlySpeaking;
+            newSpeaker.GetComponent<TextMeshProUGUI>().text = $"[{currentlySpeaking}]";
             newSpeaker.transform.SetSiblingIndex(textArea.transform.childCount - 2);
         }
 

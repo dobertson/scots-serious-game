@@ -16,7 +16,7 @@ position: 153.2168960571289,122.74763202667236
     Faither@Wull we head aff? #line:0554ac8
     Faither@... #line:08fd786
     Faither@Hiv ye seen ma bunnet onie whaur? #line:050a374
-    Faither@Help me <color="blue">fin ma bunnet</color> an we kin lea. #line:07d8413
+    Faither@Help me <playerInstruction>fin ma bunnet</playerInstruction> an we kin lea. #line:07d8413
 	<<enableDadItems Faither>>
 <<endif>> 
 

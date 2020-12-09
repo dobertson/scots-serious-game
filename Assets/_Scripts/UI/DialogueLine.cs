@@ -12,6 +12,10 @@ public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void SetValues(string lineID, string text, string translatedText)
     {
+        // yarn syntax cannot handle #, so i've created my own tag to replace here,
+        // this is used to highlight instructions to player in dialogue
+        text = text.Replace("<playerInstruction>", "<color=#009619><b>");
+        text = text.Replace("</playerInstruction>", "</color></b>");
         this.lineID = lineID;
         this.text = text;
         this.translatedText = translatedText;
