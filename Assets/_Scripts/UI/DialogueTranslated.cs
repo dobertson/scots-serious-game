@@ -45,6 +45,7 @@ public class DialogueTranslated : MonoBehaviour
                 else
                     text = splitText[0];
 
+                text = $"<b>Translation:</b> {text}";
                 strings.Add(csv.GetField("id"), text);
             }
         }

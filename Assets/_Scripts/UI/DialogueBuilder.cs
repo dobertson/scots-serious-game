@@ -21,10 +21,11 @@ public class DialogueBuilder : MonoBehaviour
         }
 
         var newText = Instantiate(dialogueLinePrefab, textArea);
-        newText.GetComponent<DialogueLine>().SetValues(
+        newText.transform.GetChild(0).GetComponent<DialogueLine>().SetValues(
             lineID,
             lineText,
             lineTextTranslated);
+        newText.transform.SetSiblingIndex(textArea.transform.childCount - 2);
 
         StartCoroutine(ScrollToBottom());
     }

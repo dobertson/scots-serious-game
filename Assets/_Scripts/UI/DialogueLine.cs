@@ -21,7 +21,6 @@ public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         this.translatedText = translatedText;
 
         GetComponent<TextMeshProUGUI>().text = this.text;
-        transform.SetSiblingIndex(transform.parent.transform.childCount - 2);
     }
 
     public void ShowTranslation()
