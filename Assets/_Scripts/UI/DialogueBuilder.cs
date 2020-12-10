@@ -3,14 +3,18 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * This class is responsible for creating the text that appears
+ * in the dialogue UI
+ */
 public class DialogueBuilder : MonoBehaviour
 {
-    public Transform textArea;
-    public GameObject dialogueLinePrefab;
-    public GameObject speakerPrefab;
-    public string currentlySpeaking;
+    public Transform textArea;              // the gameobject dialogue lines are instantiated under
+    public GameObject dialogueLinePrefab;   // prefab for the dialogue line
+    public GameObject speakerPrefab;        // prefbad for the spaker prefab
+    public string currentlySpeaking;        // keep record who is currently speaking
 
-    private ScrollRect scrollRect;
+    private ScrollRect scrollRect;          // ref to the scrollable area
 
     private void Awake()
     {
@@ -19,14 +23,16 @@ public class DialogueBuilder : MonoBehaviour
 
     public void CreateText(string speaker, string lineID, string lineText, string lineTextTranslated, bool optionLine = false)
     {
+        // if next line of text is not the same as the previous speaker
         if (!speaker.Equals(currentlySpeaking))
         {
-            currentlySpeaking = speaker;
-            var newSpeaker = Instantiate(speakerPrefab, textArea);
-            newSpeaker.GetComponent<TextMeshProUGUI>().text = $"[{currentlySpeaking}]";
-            newSpeaker.transform.SetSiblingIndex(textArea.transform.childCount - 2);
+            currentlySpeaking = speaker;                                                    // set new speaker
+            var newSpeaker = Instantiate(speakerPrefab, textArea);                          // create new speaker text
+            newSpeaker.GetComponent<TextMeshProUGUI>().text = $"[{currentlySpeaking}]";     // set the text to the speakers name
+            newSpeaker.transform.SetSiblingIndex(textArea.transform.childCount - 2);        // move the spaker above the Options in the hierarchy
         }
 
+        // instation new dialogue line
         var newText = Instantiate(dialogueLinePrefab, textArea);
         newText.transform.GetChild(0).GetComponent<DialogueLine>().SetValues(
             lineID,
@@ -34,7 +40,7 @@ public class DialogueBuilder : MonoBehaviour
             lineTextTranslated);
         newText.transform.SetSiblingIndex(textArea.transform.childCount - 2);
 
-        StartCoroutine(ScrollBottom());
+        StartCoroutine(ScrollBottom()); // once text has been added, set scroll to the bottom of the text area
     }
 
     // once text has added, scroll to bottom of text area 
@@ -48,13 +54,14 @@ public class DialogueBuilder : MonoBehaviour
     }
     
 
-    // once text has added, scroll to bottom of text area 
+    // once text has added, scroll to bottom of text area, used in the dialogue runner
     public void ScrollToBottom()
     {
         Canvas.ForceUpdateCanvases();
         scrollRect.verticalNormalizedPosition = 0;
     }
 
+    // when starting conversation, clear the previous conversation text
     public void ClearText()
     {
         currentlySpeaking = "";

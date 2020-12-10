@@ -2,6 +2,9 @@
 using UnityEngine;
 using Yarn.Unity;
 
+/*
+ * This script handles the logic in the second scuil scene
+ */
 public class Scuil2Manager : MonoBehaviour
 {
     public Transform lookAtTeacherPos;
@@ -26,18 +29,22 @@ public class Scuil2Manager : MonoBehaviour
         dialogueRunner.StartDialogue("Scuil2.Teacher"); //start teacher dialogue
     }
 
+    // when dialgoue has finished, enable collider so it can be picked up
     [YarnCommand("enablePoemPickUp")]
     public void EnablePoemPickUp()
     {
         poemOnTable.GetComponent<Collider>().enabled = true;
     }
 
+    // when your pal talks to you, the teacher will interupt, so make the player look at
+    // the teacher
     [YarnCommand("teacherInterrupts")]
     public void TeacherInterrupts()
     {
         playerLook.transform.LookAt(lookAtTeacherPos);
     }
 
+    // ready for next scene
     [YarnCommand("nextScene")]
     public void NextScene()
     {
@@ -50,6 +57,8 @@ public class Scuil2Manager : MonoBehaviour
         StartCoroutine(StartConvo());
     }
 
+    // when poem has been put down, wait two seconds before 
+    // your pals starts conversation with you
     IEnumerator StartConvo()
     {
         yield return new WaitForSeconds(2f);

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ *  This script handles the WASD input for players moving around.
+ *  It was lifted from this great youtube video https://www.youtube.com/watch?v=n-KX8AeGK7E
+ */
 public class PlayerMove : MonoBehaviour
 {
     public string horizontalInputName;
@@ -27,8 +31,6 @@ public class PlayerMove : MonoBehaviour
     {
         charController = GetComponent<CharacterController>();
         isSprinting = false;
-        Debug.Log("Awake / PM:- " + transform.position);
-        //ChangePos();
     }
 
     void ChangePos()
@@ -43,9 +45,10 @@ public class PlayerMove : MonoBehaviour
             charController.enabled = true;
         }
     }
+
     void Start()
     {
-        Debug.Log("Start / PM:- " + transform.position);
+
     }
 
     private void Update()

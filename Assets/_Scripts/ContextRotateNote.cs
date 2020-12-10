@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  This class is used on the context notes to rotate them
+ */
 public class ContextRotateNote : MonoBehaviour
 {
     public float speed = 1;

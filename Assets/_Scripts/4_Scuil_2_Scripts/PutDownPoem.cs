@@ -1,7 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  When the player picks up the poem, after five seconds they can put it back on the table
+ */
 public class PutDownPoem : MonoBehaviour
 {
     public GameObject poemOnTable; //ref to other poem gameobejct to enable when putting this down

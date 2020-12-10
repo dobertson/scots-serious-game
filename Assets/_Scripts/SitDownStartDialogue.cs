@@ -2,7 +2,7 @@
 using Yarn.Unity;
 
 /*
- *  Sit playe down for a conversation by you provide a sitting position, 
+ *  Sit player down for a conversation by you provide a sitting position, 
  *  a look at position and the dialogue node to start at.
  */
 public class SitDownStartDialogue : MonoBehaviour
@@ -11,14 +11,19 @@ public class SitDownStartDialogue : MonoBehaviour
     public Transform lookAtPosition;    // position to look at when seated
     public string startYarnNode;        // dialogue node to start seated
     public bool setPositionsInPlayMode; // used when tweaking the positions in play mode
+
     private PlayerMove playerMove;
     private PlayerLook playerLook;
+    private PlayerController playerController;
+    private DialogueRunner dialogueRunner;
 
     private void Start()
     {
         setPositionsInPlayMode = false; //ensure this is always false, and can only be set true in inspector
         playerMove = FindObjectOfType<PlayerMove>();
         playerLook = FindObjectOfType<PlayerLook>();
+        playerController = FindObjectOfType<PlayerController>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     void OnMouseDown()
@@ -26,11 +31,11 @@ public class SitDownStartDialogue : MonoBehaviour
         // if player is close enough to sit
         if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            FindObjectOfType<PlayerController>().DisablePlayerMovement();       // disable movement
+            playerController.DisablePlayerMovement();       // disable movement
             playerMove.transform.position = sittingPosition.position;           // set positions
             playerLook.transform.LookAt(lookAtPosition);
             GetComponent<Collider>().enabled = false;                           // ensure you can't click and execute this code again
-            FindObjectOfType<DialogueRunner>().StartDialogue(startYarnNode);    // start dialogue
+            dialogueRunner.StartDialogue(startYarnNode);    // start dialogue
         }
     }
 

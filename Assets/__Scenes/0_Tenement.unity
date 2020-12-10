@@ -10870,7 +10870,7 @@ PrefabInstance:
     - target: {fileID: 5772953007247244411, guid: 9b0e57cb0ffc0e348a27c35c1db144c2,
         type: 3}
       propertyPath: gameState
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6047830654848521746, guid: 9b0e57cb0ffc0e348a27c35c1db144c2,
         type: 3}

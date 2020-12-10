@@ -15,12 +15,14 @@ public class InteractableDescription : MonoBehaviour
         textContainer.SetActive(false);
     }
 
+    // show the ui
     public void Show(string description)
     {
         text.text = description;
         textContainer.SetActive(true);
     }
 
+    // hide it
     public void Hide()
     {
         textContainer.SetActive(false);

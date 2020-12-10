@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  When teacher has finished speaking, let player pick up poem
+ */
 public class ReadPoem : MonoBehaviour
 {
-    public GameObject closeUpPoem;
+    public GameObject closeUpPoem;  // poem that is disabled that when enabled shows poem close to player camera
 
     private SoundManager soundManager;
     private InteractableDescription interactableDescription;
@@ -20,6 +23,7 @@ public class ReadPoem : MonoBehaviour
         closeUpPoem.SetActive(false);
     }
 
+    // pick up and show poem
     private void OnMouseDown()
     {
         soundManager.PlayNotePickupSFX();

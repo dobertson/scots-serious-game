@@ -1,19 +1,28 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * This script handles enabling/disabling the scripts
+ * that handle player movement and looking
+ */
 public class PlayerController : MonoBehaviour
 {
+    private PlayerLook playerLook;
+    private PlayerMove playerMove;
     void Start()
     {
+        // hide cursor when moving
         Cursor.visible = false;
+        playerLook = FindObjectOfType<PlayerLook>();
+        playerMove = FindObjectOfType<PlayerMove>();
     }
 
     // enable control of player looking/moving
     public void EnablePlayerMovement()
     {
         Cursor.visible = false;
-        FindObjectOfType<PlayerLook>().enabled = true;
-        FindObjectOfType<PlayerMove>().enabled = true;
+        playerLook.enabled = true;
+        playerMove.enabled = true;
 
         // enable colliders so player can start dialogues with other NPCs
         var npcs = FindObjectsOfType<NPC>();
@@ -27,8 +36,8 @@ public class PlayerController : MonoBehaviour
     public void DisablePlayerMovement()
     {
         Cursor.visible = true;
-        FindObjectOfType<PlayerLook>().enabled = false;
-        FindObjectOfType<PlayerMove>().enabled = false;
+        playerLook.enabled = false;
+        playerMove.enabled = false;
 
         // prevent player from clicking on NPCs for dialogue when 
         // player is already in dialogue

@@ -30,6 +30,12 @@ using UnityEngine.UI;
 using System.Text;
 using System.Collections.Generic;
 
+/*
+ *  This code is based off the DialogueUI.cs class provided with YarnSpinner. 
+ *  OnLineUpdate was changed so that i could build a history of dialogue text, rather than
+ *  show one line at a time. See line 310 for this change.
+ */
+
 namespace Yarn.Unity {
     
     /// <summary>
@@ -300,7 +306,7 @@ namespace Yarn.Unity {
                     yield return new WaitForSeconds (textSpeed);
                 }
             } else {
-                // Display the entire line immediately if textSpeed <= 0
+                // split the string into the speaker, and the dialogue they speak
                 var splitLine = text.Split('@');
                 CreateLine(splitLine[0], line.ID, splitLine[1]);
             }

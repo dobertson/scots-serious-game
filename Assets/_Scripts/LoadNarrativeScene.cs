@@ -73,6 +73,8 @@ public class LoadNarrativeScene : MonoBehaviour
 
     private void Update()
     {
+        // similar to Interactable.cs in that it should hide the description if the plyaer moves
+        // far away from the door but is still looking at it
         if (isShowingDescription)
         {
             if (!GameManager.IsPlayerCloseEnough(transform.position))
@@ -83,6 +85,7 @@ public class LoadNarrativeScene : MonoBehaviour
         }
     }
 
+    // show description if looking at it
     private void OnMouseOver()
     {
         if (!isShowingDescription)
@@ -101,6 +104,7 @@ public class LoadNarrativeScene : MonoBehaviour
         }
     }
 
+    // hide descripotion if not looking at the door
     private void OnMouseExit()
     {
         FindObjectOfType<InteractableDescription>().Hide();
@@ -118,6 +122,9 @@ public class LoadNarrativeScene : MonoBehaviour
         }
     }
 
+    // GameManager's IsPlayerCloseEnough is used everywhere in the game but here, since the landings between 
+    // doors is short we don't want to show the next doors interactable descrition when players return 
+    // to tenement scene
     private bool IsCloseEnough()
     {
         var minumDistance = 2f;

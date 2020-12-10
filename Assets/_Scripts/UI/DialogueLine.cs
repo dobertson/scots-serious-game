@@ -4,15 +4,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
+ *  This script is attached the dialogue lines, it holds the line Id, the dialogue text, and it's translation
+ */
 public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string lineID;
     public string text;
     public string translatedText;
 
+    private TranslatedLine translatedLine;
+
+    private void Awake()
+    {
+        translatedLine = FindObjectOfType<TranslatedLine>();
+    }
+
     public void SetValues(string lineID, string text, string translatedText)
     {
-        // yarn syntax cannot handle #, so i've created my own tag to replace here,
+        // yarn syntax cannot handle # syntax, so i've created my own tag to replace here,
         // this is used to highlight instructions to player in dialogue
         text = text.Replace("<playerInstruction>", "<color=#009619><b>");
         text = text.Replace("</playerInstruction>", "</color></b>");
@@ -25,19 +35,21 @@ public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void ShowTranslation()
     {
-        FindObjectOfType<TranslatedLine>().Show(translatedText);
+        translatedLine.Show(translatedText);
     }
 
     public void HideTranslation()
     {
-        FindObjectOfType<TranslatedLine>().Hide();
+        translatedLine.Hide();
     }
 
+    // if player hovers mouse over text, show the translation
     public void OnPointerEnter(PointerEventData eventData)
     {
         ShowTranslation();
     }
 
+    // if player is not hovering over it, hide the translation
     public void OnPointerExit(PointerEventData eventData)
     {
         HideTranslation();

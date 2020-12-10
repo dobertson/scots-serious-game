@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Store strings here so that if they need changed they can
+ * be changed in one place. this also prevents any misspelling
+ * that would occur from typing the same string several times
+ */
 public static class StringLiterals
 {
     public static string TenementScene = "0_Tenement";

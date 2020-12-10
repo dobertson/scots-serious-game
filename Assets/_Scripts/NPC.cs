@@ -27,35 +27,44 @@ SOFTWARE.
 using UnityEngine;
 using Yarn.Unity;
 
-    /// attached to the non-player characters, and stores the name of the Yarn
-    /// node that should be run when you talk to them.
+
+/*
+ *  This is based off the NPC script that comes with YarnSpinner example project.
+ *  It is attached to NPC characters that you can have dialogue with
+ */
 
 public class NPC : MonoBehaviour 
 {
-    public string talkToNode = "";
+    public string talkToNode = ""; // yarn node to start conversation with if player clicks on npc
 
     [Header("Optional")]
-    public YarnProgram scriptToLoad;
+    public YarnProgram scriptToLoad; // the script to load
+
+    private DialogueRunner dialogueRunner;
+    private DialogueTranslated dialogueTranslated;
 
     void Start () {
         if (scriptToLoad != null) {
             // add script to dialgoue runner
-            DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
             dialogueRunner.Add(scriptToLoad);
 
             // add translated script to dialgue 
-            DialogueTranslated dialogueTranslated = FindObjectOfType<DialogueTranslated>();
+            dialogueTranslated = FindObjectOfType<DialogueTranslated>();
             dialogueTranslated.Add(scriptToLoad.localizations[0].text);
             }
     }
 
     private void OnMouseDown()
     {
+        // if player is close enough to talk
         if (GameManager.IsPlayerCloseEnough(transform.position))
-        {
+        {  
+            // and there is a node to talk to
             if (!string.IsNullOrEmpty(talkToNode))
-            {
-                FindObjectOfType<DialogueRunner>().StartDialogue(talkToNode);
+            {   
+                //talk
+                dialogueRunner.StartDialogue(talkToNode);
             }
         }
     }

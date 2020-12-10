@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * this gameobject is common to all scenes,
+ * has a list of commonly used sfx to play
+ * at any given time
+ */
 public class SoundManager : MonoBehaviour
 {
     private AudioSource source;

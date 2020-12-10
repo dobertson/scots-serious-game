@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * This class lets the player click on the ball and punt it
+ * This class lets the player click on the ball and kick it
  */
 public class KickBall : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class KickBall : MonoBehaviour
 
     private void Start()
     {
-        rb.AddForce(transform.forward * 4f, ForceMode.Impulse); //whebn scene starts, kick ball towards player
+        rb.AddForce(transform.forward * 4f, ForceMode.Impulse); //when scene starts, kick ball towards player
     }
 
     private void OnMouseDown()
@@ -30,8 +30,8 @@ public class KickBall : MonoBehaviour
         // if close enough
         if (GameManager.IsPlayerCloseEnough(transform.position))
         {
-            var direction = playerMove.transform.forward * 7f; // kick ball in players direction
-            direction.y = Random.Range(3f, 10f);                                  // set random height of kick
+            var direction = playerMove.transform.forward * 7f;  // kick ball in players direction
+            direction.y = Random.Range(3f, 10f);                 // set random height of kick
             
             rb.AddForce(direction, ForceMode.Impulse);          // kick and play kicking sfx
             soundManager.PlayBallKickSFX();

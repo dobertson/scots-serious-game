@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+/*
+ * This script is attached to context notes found on the stair well
+ * in the tenement close scene
+ */
 public class ContextNote : MonoBehaviour
 {
     [TextArea]
@@ -13,11 +17,13 @@ public class ContextNote : MonoBehaviour
 
     private void Start()
     {
+        // disable note if it should not show on this game state
         if(showNoteOnState != GameManager.Instance.gameState)
         {
             gameObject.SetActive(false);
         }
 
+        //disable outline on start
         outline = GetComponent<Outline>();
         outline.enabled = false;
 
@@ -44,12 +50,14 @@ public class ContextNote : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        // if player is close enough, show outline
         if (GameManager.IsPlayerCloseEnough(transform.position))
         {
             outline.enabled = true;
         }
     }
 
+    // hide outline when mouse not over collider
     private void OnMouseExit()
     {
         outline.enabled = false;

@@ -15,6 +15,7 @@ public class MenuMain : MonoBehaviour
 
     public void Start()
     {
+        // if the state is main menu, show the relvant objects
         if(GameManager.Instance.gameState == GameState.MAIN_MENU)
         {
             mainMenuContainer.SetActive(true);
@@ -30,6 +31,7 @@ public class MenuMain : MonoBehaviour
             mainMenuContainer.SetActive(false);
         }
 
+        // hide all the other screens like controls, credits and instructions in the main menu page
         foreach(GameObject screen in mainMenuOtherScreens)
         {
             screen.SetActive(false);
@@ -38,6 +40,7 @@ public class MenuMain : MonoBehaviour
 
     private void Update()
     {
+        // check if player clicked enter the game
         if (isPlayerEntering)
         {
             // move player inside building

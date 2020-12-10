@@ -7,12 +7,12 @@ using Yarn.Unity;
  */
 public class FaimlyManager : MonoBehaviour
 {
-    public GameObject bunnetOnHead; // when player finds the bunnet, activate this
-    public bool canPickUpItem;
+    public GameObject bunnetOnHead; // when player finds the bunnet, activate the bunnet on dads head
+    public bool canPickUpItem;      // set to false when player is currently holding an item
 
     private InMemoryVariableStorage dialogueVariables;
-    private SceneTransitionManager sceneTransitionManager;
-    private GameObject[] dadItems;
+    private SceneTransitionManager sceneTransitionManager; // handles transitions between scenes
+    private GameObject[] dadItems;                         // collection of all the dad items
 
     private void Awake()
     {
@@ -35,7 +35,6 @@ public class FaimlyManager : MonoBehaviour
 
     // when dad asks you find his "bunnet", enable the collider
     // for each of the objecs so that user can pick them up 
-    // to progress in the scene
     [YarnCommand("enableDadItems")]
     public void EnableDadItems()
     {
@@ -72,6 +71,7 @@ public class FaimlyManager : MonoBehaviour
         sceneTransitionManager.FadeToScene(StringLiterals.TenementScene);
     }
 
+    // reset the interactable descriptions and enable pick up
     public void ResetDadItems()
     {
         // reset the pickup 
@@ -82,6 +82,8 @@ public class FaimlyManager : MonoBehaviour
         }
     }
 
+    // set the interactable description to let player know they can't
+    // pick up that object
     public void PreventDadItemPickup()
     {
         canPickUpItem = false;

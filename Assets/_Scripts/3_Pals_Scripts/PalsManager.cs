@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
+/*
+ * This script handles the logic for the pals scene
+ */
 public class PalsManager : MonoBehaviour
 {
     private SceneTransitionManager sceneTransitionManager;
@@ -12,6 +15,7 @@ public class PalsManager : MonoBehaviour
         sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
     }
 
+    // when dialogue is finished, fade to black
     [YarnCommand("nextScene")]
     public void NextScene()
     {

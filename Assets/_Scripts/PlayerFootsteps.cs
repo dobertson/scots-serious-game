@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * This script is attached to the player and will play footstep sfx
+ */
 public class PlayerFootsteps : MonoBehaviour
 {
-    public AudioSource footstepSource;
-    private Vector3 lastStep;
-    public float minimumStepDistance;
+    public AudioSource footstepSource;      // the sfx
+    private Vector3 lastStep;               // keep record of last position of step
+    public float minimumStepDistance;       // min distance between steps to play sound
 
     private void Start()
     {
-        lastStep = transform.position;
+        lastStep = transform.position; // store the initial step position
     }
 
     private void Update()
     {
+
+        // if distance between steps is enough, play sfx
         var distanceFromLastStep = Vector3.Distance(lastStep, transform.position);
 
         if(distanceFromLastStep > minimumStepDistance)

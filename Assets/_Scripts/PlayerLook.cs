@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ *  This script handles the mouse input for players looking around.
+ *  It was lifted from this great youtube video https://www.youtube.com/watch?v=n-KX8AeGK7E
+ */
 public class PlayerLook : MonoBehaviour
 {
     public string mouseXInputName, mouseYInputName;

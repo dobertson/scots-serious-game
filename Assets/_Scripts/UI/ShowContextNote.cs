@@ -21,12 +21,13 @@ public class ShowContextNote : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
     }
 
+    // show the context ui with the given text
     public void ShowText(string noteText)
     {
         playerController.DisablePlayerMovement();
         noteContainer.SetActive(true);
         myText.text = noteText;
-        source.pitch = 1f;
+        source.pitch = 1f; // play a book opening sfx
         source.Play();
     }
 }
