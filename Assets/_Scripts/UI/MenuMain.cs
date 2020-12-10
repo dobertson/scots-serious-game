@@ -9,7 +9,7 @@ public class MenuMain : MonoBehaviour
     public float enteringSpeed;             // speed at which to enter
     public Transform enteringPosition;      // position to move towards
     public GameObject mainMenuContainer;    // main menu UI contain
-    public GameObject controlsContainer;       // UI showing player controls
+    public GameObject[] mainMenuOtherScreens;       // UI showing player controls
     public GameObject mainMenuDoor;         // door that leads into building
     private GameObject player;
 
@@ -18,7 +18,6 @@ public class MenuMain : MonoBehaviour
         if(GameManager.Instance.gameState == GameState.MAIN_MENU)
         {
             mainMenuContainer.SetActive(true);
-            controlsContainer.SetActive(false);
             player = GameObject.FindGameObjectWithTag(StringLiterals.PlayerTag);
             player.GetComponent<PlayerController>().DisablePlayerMovement();
             enteringPosition.position = new Vector3(
@@ -29,7 +28,11 @@ public class MenuMain : MonoBehaviour
         else
         {
             mainMenuContainer.SetActive(false);
-            controlsContainer.SetActive(false);
+        }
+
+        foreach(GameObject screen in mainMenuOtherScreens)
+        {
+            screen.SetActive(false);
         }
     }
 

@@ -10,6 +10,13 @@ public class DialogueBuilder : MonoBehaviour
     public GameObject speakerPrefab;
     public string currentlySpeaking;
 
+    private ScrollRect scrollRect;
+
+    private void Awake()
+    {
+        scrollRect = GameObject.FindGameObjectWithTag(StringLiterals.ScrollAreaTag).GetComponent<ScrollRect>();
+    }
+
     public void CreateText(string speaker, string lineID, string lineText, string lineTextTranslated, bool optionLine = false)
     {
         if (!speaker.Equals(currentlySpeaking))
@@ -27,17 +34,25 @@ public class DialogueBuilder : MonoBehaviour
             lineTextTranslated);
         newText.transform.SetSiblingIndex(textArea.transform.childCount - 2);
 
-        StartCoroutine(ScrollToBottom());
+        StartCoroutine(ScrollBottom());
     }
 
     // once text has added, scroll to bottom of text area 
-    IEnumerator ScrollToBottom()
+    IEnumerator ScrollBottom()
     {
         yield return new WaitForEndOfFrame();
         Canvas.ForceUpdateCanvases();
         GameObject.FindGameObjectWithTag(StringLiterals.ScrollAreaTag)
             .GetComponent<ScrollRect>()
             .verticalNormalizedPosition = 0;
+    }
+    
+
+    // once text has added, scroll to bottom of text area 
+    public void ScrollToBottom()
+    {
+        Canvas.ForceUpdateCanvases();
+        scrollRect.verticalNormalizedPosition = 0;
     }
 
     public void ClearText()
