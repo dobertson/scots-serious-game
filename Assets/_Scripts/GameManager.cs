@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         // ensure there is only one game manager
         if (_instance != null && _instance != this)
         {
-            Debug.Log("DESTROY");
             Destroy(this.gameObject);
         }
         else
@@ -31,7 +30,6 @@ public class GameManager : MonoBehaviour
             _instance = this;
         }
 
-        Debug.Log("DON'T DESTORY");
         DontDestroyOnLoad(this.gameObject);
     }
 

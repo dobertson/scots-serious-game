@@ -31,7 +31,7 @@ James@Gads, that's boggin. Yer no richt. #line:0e631c0
 <<if $englishUse is 0>>
 	Connor@Dae ye want tae jine me Glen? #line:0d0d9e8
 		-> Aye that soons guid. #line:0142153
-			Connor@Magic. Let's heid. #line:0cc0978
+			Connor@Magic. Let's head. #line:0cc0978
 <<else>>
 	Connor@Aye weel, am awiy.  #line:06ecfb6
 <<endif>>

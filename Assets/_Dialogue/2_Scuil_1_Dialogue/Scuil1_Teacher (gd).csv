@@ -1,14 +1,14 @@
 id,text,file,node,lineNumber
-line:073e577,"Mrs Thomson@Hullo Glen, am gled tae hae ye in oor cless.",Scuil1_Teacher,Teacher,7
+line:073e577,"Mrs Thomson@Hullo Glen, it's great tae finally hae ye in oor cless.",Scuil1_Teacher,Teacher,7
 line:026af6b,"Mrs Thomson@A howp ye enjoayed leuking roon the scuil afore, we dae the best fur oor pupils.",Scuil1_Teacher,Teacher,8
-line:0842e71,"Mrs Thomson@A've sat ye nixt tae Connor, doon bit the front here. A hink you twae wull mak guid pals!",Scuil1_Teacher,Teacher,9
+line:0842e71,"Mrs Thomson@A've sat ye nixt tae Connor, doon bi the front here. A hink you twae wull mak guid pals!",Scuil1_Teacher,Teacher,9
 line:0c19228,Mrs Thomson@Guid mornin cless!,Scuil1_Teacher,Teacher.Welcome,17
 line:0133fab,The class@G u i d  m o r n i n  M r s  T h o m s o n .,Scuil1_Teacher,Teacher.Welcome,18
 line:08508b3,"Mrs Thomson@Is some o ye micht hae noticed, we've goat a new pupil in the cless.",Scuil1_Teacher,Teacher.Welcome,19
 line:0dab5da,Mrs Thomson@Evdy say hullo tae Glen.,Scuil1_Teacher,Teacher.Welcome,20
 line:0c8ebd5,The class@H u l l o .,Scuil1_Teacher,Teacher.Welcome,21
-line:09ad363,"Mrs Thomson@If ye mind last Friday, a said that oan this week we wid bi movin oantae Inglis lessons.",Scuil1_Teacher,Teacher.Welcome,22
-line:0e3e54a,"Mrs Thomson@Is ye get aulder, ye wull need tae scrieve a loat, si it is important thit ye ken how tae spell correctly.",Scuil1_Teacher,Teacher.Welcome,23
+line:09ad363,"Mrs Thomson@If ye mind last Friday, a said that this week we wid bi movin intae Inglis lessons.",Scuil1_Teacher,Teacher.Welcome,22
+line:0e3e54a,"Mrs Thomson@Is ye get aulder, ye wull need tae scrieve a loat. It is important thit ye ken how tae spell correctly.",Scuil1_Teacher,Teacher.Welcome,23
 line:0d528d5,Mrs Thomson@A've prepared a fun exercise fur ye aw thit wull help ye lairn the richt wirds fur hings.,Scuil1_Teacher,Teacher.Welcome,24
 line:0bb9a3a,Mrs Thomson@Edvy shuild hae a wee boax oan thir desk.,Scuil1_Teacher,Teacher.Welcome,25
 line:0873953,"Mrs Thomson@A want evdy tae hink o wirds they ken. It kin bi onie wird, it kin bi an object, or a wird ye jist really like tae say.",Scuil1_Teacher,Teacher.Welcome,26
@@ -38,4 +38,4 @@ line:062e3d7,"Mrs Thomson@""Auld"" is an ""old"" wird!",Scuil1_Teacher,Teacher.A
 line:001e79c,"Mrs Thomson@We dinnae yaise it oniemair, ye shuild yaise ""old"".",Scuil1_Teacher,Teacher.Auld,122
 line:0f86268,"Mrs Thomson@Right cless, that wis a loat o guid wirk the day.",Scuil1_Teacher,Teacher.EndOfClass,129
 line:0921137,"Mrs Thomson@A howp we hae aw lairned somehing, an improved oor Inglis.",Scuil1_Teacher,Teacher.EndOfClass,130
-line:0f0d24f,"Mrs Thomson@Tak yer tins hame, an memorise thae wirds!",Scuil1_Teacher,Teacher.EndOfClass,131
+line:0f0d24f,"Mrs Thomson@Tak yer boaxes hame, an memorise thae wirds!",Scuil1_Teacher,Teacher.EndOfClass,131

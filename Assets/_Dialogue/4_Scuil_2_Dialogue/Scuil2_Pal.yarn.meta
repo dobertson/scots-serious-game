@@ -10,8 +10,33 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-GB
   stringIDs:
-  - line:0ea0d49
-  - line:0cbbb8b
+  - line:0c869c6
+  - line:0eefada
+  - line:0a39da9
+  - line:07b6348
+  - line:0754070
+  - line:0c1e44e
+  - line:048285e
+  - line:05e52a4
+  - line:06fc24f
+  - line:0c38a75
+  - line:0963d74
+  - line:09e166b
+  - line:03a269a
+  - line:0e1dbcf
+  - line:09ce281
+  - line:0c9109f
+  - line:06baeb8
+  - line:0377fa4
+  - line:0f679e8
+  - line:065f014
+  - line:0ee0b3e
+  - line:0e8fe91
+  - line:03d53fa
+  - line:0a2e9a4
+  - line:08f2fcd
+  - line:0bac05b
+  - line:095b2e8
   compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
@@ -19,4 +44,4 @@ ScriptedImporter:
     type: 3}
   localizations:
   - languageName: gd
-    text: {fileID: 4900000, guid: 98067757c22a77842baeb58681c58e8c, type: 3}
+    text: {fileID: 4900000, guid: aa1b060b7825609419a0f3b69caf71e2, type: 3}

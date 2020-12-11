@@ -1,61 +1,65 @@
 title: Joab.Hello
 tags:
 ---
-Interviewer@Hello, sorry for the wait, my meeting ran over. If you'd like to take a seat we can get started.  #line:0dc510b
+George@Hello, I'm George, sorry for the wait, my meeting ran over. If you'd like to take a seat we can get started.  #line:0dc510b
 ===
 title: Joab.Interview
 tags:
 ---
 <<set $scotsUse to 0>>
-Interviewer@So we received your application and you tick all the boxes, in terms of qualifications.  #line:07cb59c
-Interviewer@We wanted to bring you in to have a chat, talk about the job, and learn a bit about you.  #line:0b6261b
-Interviewer@How does that sound? #line:02bcf14
+George@So we received your application and you tick all the boxes, in terms of qualifications.  #line:07cb59c
+George@We wanted to bring you in to have a chat, talk about the job, and learn a bit about you.  #line:0b6261b
+George@How does that sound? #line:02bcf14
 	-> Aye, soonds guid. #line:0453256
 		<<set $scotsUse to $scotsUse + 1>>
-			Interviewer@Okay. #line:08ac4ca
 	-> Yeah, sounds good. #line:0266591
-		Interview@Great. #line:08e32b4
-Interviewer@CompanyName has a colourful history, as I've no doubt you're aware of! Once a small, humble shoe shop in Glasgow, this company has built an empire in selling shoes around the world. #line:0ab2070
-Interviewer@I am proud to work here, if you end up working here I hope you do too. #line:041bdc0
+George@Great. #line:08e32b4
+George@CompanyName has a colourful history, as I've no doubt you're aware of! Once a small, humble shoe shop in Glasgow, this company has built an empire in selling shoes around the world. #line:0ab2070
+George@I am proud to work here, if you end up working here I hope you do too. #line:041bdc0
 	-> A howp sae tae! #line:0d797dd
 		<<set $scotsUse to $scotsUse + 1>>
 	-> I hope so too! #line:0d883b2
-Interviewer@Are you from Glasgow? #line:0c0d648
+George@Are you from Glasgow? #line:0c0d648
 	-> A stay here, bit a'm fae Kilmaurnock. #line:00c0e49
 		<<set $scotsUse to $scotsUse + 1>>
 	-> I live here, but I'm from Kilmarnock. #line:0ef8889
-Interviewer@Ha! "Say aye to a killie pie"! #line:08330a2
-Interviewer@It's a good slogan. #line:0969945
-Interviewer@Never tried one myself. #line:07121a5
-Interviewer@As for the job itself, was there any questions you had? Do you want me to go over the details? #line:06705b6
+George@Ha! "Say aye to a killie pie"! #line:08330a2
+George@It's a good slogan. #line:0969945
+George@Never tried one myself. #line:07121a5
+George@As for the job itself, was there any questions you had? Do you want me to go over the details? #line:06705b6
 	-> Aye #line:0e744dd
 	-> Yeah #line:0850192
-Interviewer@People think success in business is innovation, market dominance, labour market flexibility, yada yada yada. #line:0e808ab
-Interviewer@And there's truth there. #line:0748e99
-Interviewer@But. #line:06b38e5
-Interviewer@A successful business is nothing without an army of accountants. Behind the scenes we are the glue that holds it all together. #line:0ccd8d9
-Interviewer@What is business if not money management? #line:0a4a589
+George@People think success in business is innovation, market dominance, labour market flexibility, yada yada yada. #line:0e808ab
+George@And there's truth there. #line:0748e99
+George@But. #line:06b38e5
+George@A successful business is nothing without an army of accountants. Behind the scenes we are the glue that holds it all together. #line:0ccd8d9
+George@What is business if not money management? #line:0a4a589
 	-> Aw aye, am a hunner percent wae ye. #line:03fa7cf
 		<<set $scotsUse to $scotsUse + 1>>
 	-> Oh yeah, i'm one hundred percent with you. #line:0ebdac4
-Interviewer@Good! I'm glad to hear it. #line:0254f19
-Interviewer@Can you believe people call this job boring? #line:024c236
+George@Good! I'm glad to hear it. #line:0254f19
+George@Can you believe people call this job boring? #line:024c236
 	-> Folk haver. #line:0a4f3e3
 		<<set $scotsUse to $scotsUse + 1>>
 	->People talk nonsense. #line:0654eed
-Interviewer@That they do.			 #line:0ea7aee
+George@That they do.			 #line:0ea7aee
+George@Right well, it's been a pleasure, i'm sorry but i've got another meeting in five minutes. #line:0678281
+George@I'm sorry that we didn't have more time. #line:036cf93
+George@We'll be in touch. #line:059af6f
+	-> Cheers, see ye later. #line:02accb0
+	-> Cheers, goodbye. #line:0963b72
 <<fadeToBlack JoabManager>>
 ===
 title: Joab.Result
 tags:
 ---
-Receptionist@Hi calling about the job. #line:0cbc815
+Janet@Hi Glen, it's Janet from reception, i'm phoning about the interview you had with CompanyName earlier. #line:0cbc815
 <<if $scotsUse > 0>>
-	Receptionist@You've not go the job, I'm sorry #line:0ed53ff
-		-> Okay... #line:0b02c3f
+	Janet@I'm sorry to say that we've went with someone else. #line:0ed53ff
+	Janet@George was saying he really enjoyed talking with you, but he didn't think you were quite the right fit.  #line:03c8ab2
+	Janet@Best of luck! Bye. #line:0ccef9a
 <<else>>
-	Receptionist@You've got the job, I'm sorry #line:016715b
-		-> Yay! #line:02957b6
+	Janet@George was really impressed with you, we'd like to offer you the job. #line:016715b
 <<endif>>
 <<wait 2>>
 <<nextScene JoabManager>>

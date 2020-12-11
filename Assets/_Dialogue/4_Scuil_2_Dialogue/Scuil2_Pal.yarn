@@ -1,48 +1,49 @@
 title: Scuil2.Teacher
 tags:
 ---
-Mr Hamilton@Good morning class!
-The class@G o o d  m o r n i n g  M r  H a m i l t o n .
-Mr Hamilton@It's that time of year again, Burns Night!
-Mr Hamilton@Rabbie Burns, bard of Ayrshire, the Ploughman Poet.
-Mr Hamilton@A national treasure.
-Mr Hamilton@You know the drill, every Burns Night each primary class has a competition for best peom recital.
-Mr Hamilton@There's shortbread and a bottle of irn bru for the winner!
-Mr Hamilton@Since this class is older, you get a more difficult poem from last year.
-Mr Hamilton@This year we are learning "Tae a moose".
-Mr Hamilton@Burns is said to have wrote the poem after destorying a mouses nest just before winter when he was out ploughing the fields. 
-Mr Hamilton@Burns' brother claimed he wrote it whilst still holding the plough
-Mr Hamilton@Right class, get learning!
+Mr Hamilton@Good morning class! #line:0c869c6
+The class@G o o d  m o r n i n g  M r  H a m i l t o n . #line:0eefada
+Mr Hamilton@It's that time of year again, Burns Night! #line:0a39da9
+Mr Hamilton@Rabbie Burns; bard of Ayrshire; the Ploughman Poet. #line:07b6348
+Mr Hamilton@A national treasure. #line:0754070
+Mr Hamilton@You know the drill by now, every Burns Night each primary class has a competition for best peom recital. #line:0c1e44e
+Mr Hamilton@There's shortbread and a bottle of irn bru for the winner! #line:048285e
+Mr Hamilton@Since you guys are older now, you get a more difficult poem from last year. #line:05e52a4
+Mr Hamilton@This year we are learning "Tae a moose". #line:06fc24f
+Mr Hamilton@Burns is said to have wrote the poem after destorying a mouses nest when he was out ploughing the fields, just before winter!  #line:0c38a75
+Mr Hamilton@Burns' brother claimed he wrote it whilst still holding the plough. #line:0963d74
+Mr Hamilton@Right class, get learning! #line:09e166b
 <<enablePoemPickUp Scuil2Manager>>
 ===
 title: Scuil2.Pal
 tags: 
 ---
-Connor@Hawl
-Connor@This is pish, a hate that wi hae tae dae this ivverie year.
-Connor@A mean, a kin read some o it, some o thae wirds leuk familiar, bit it jist leuks wrang et the same time.
+Connor@Hawl #line:03a269a
+Connor@This is pish, a hate that wi hae tae dae this ivverie year. #line:0e1dbcf
+Connor@A mean, a kin read some o it, some o thae wirds leuk familiar. #line:0d4e1ab
+Connor@Bit et the same time, it jist leuks wrang. #line:09ce281
 <<teacherInterrupts Scuil2Manager>>
-Mr Hamilton@Glen!
-Mr Hamilton@Do you have something to share with the rest of the class?
-[[Naw, a wisnae talklin. | Scuil2.TeacherNotHappy]]			
-[[No, i wasn't talking. | Scuil2.TeacherTellOff]]
+Mr Hamilton@Glen! #line:0c9109f
+Mr Hamilton@Do you have something to share with the rest of the class? #line:06baeb8
+[[Naw, a wisnae talkin. | Scuil2.TeacherNotHappy]]			 #line:0377fa4
+[[No, i wasn't talking. | Scuil2.TeacherTellOff]] #line:0f679e8
 ===
 title: Scuil2.TeacherTellOff
 tags:
 ---
-Mr Hamilton@Don't take me for being stupid.
-Mr Hamilton@Don't do it again, or you and Connor will be seperated.
-Mr Hamilton@Back to studying the poem.
+Mr Hamilton@Don't take me for being stupid. #line:065f014
+Mr Hamilton@Don't do it again, or you and Connor will be seperated. #line:0ee0b3e
+Mr Hamilton@Back to studying the poem. #line:0e8fe91
 <<nextScene Scuil2Manager>>
 ===
 title: Scuil2.TeacherNotHappy
 tags:
 ---
-Mr Hamilton@Excuse me, say that again? 
-	-> It wisnae me, a wisnae talkin.
-		Mr Hamilton@Are you giving me cheek?
-		Mr Hamilton@I would like a word with you, get outside.
-	-> It wasn't me, I was not speaking.
+Mr Hamilton@Excuse me, say that again?  #line:03d53fa
+	-> It wisnae me, a wisnae talkin. #line:0a2e9a4
+		Mr Hamilton@Are you giving me cheek? #line:0bac05b
+		Mr Hamilton@I would like a word with you, get outside. #line:095b2e8
+	-> It wasn't me, I was not speaking. #line:08f2fcd
 		[[Scuil2.TeacherTellOff]]	
 <<nextScene Scuil2Manager>>	
 ===

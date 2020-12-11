@@ -14,12 +14,7 @@ public class DialogueBuilder : MonoBehaviour
     public GameObject speakerPrefab;        // prefbad for the spaker prefab
     public string currentlySpeaking;        // keep record who is currently speaking
 
-    private ScrollRect scrollRect;          // ref to the scrollable area
-
-    private void Awake()
-    {
-        scrollRect = GameObject.FindGameObjectWithTag(StringLiterals.ScrollAreaTag).GetComponent<ScrollRect>();
-    }
+    public ScrollRect scrollRect;          // ref to the scrollable area
 
     public void CreateText(string speaker, string lineID, string lineText, string lineTextTranslated, bool optionLine = false)
     {
@@ -39,26 +34,26 @@ public class DialogueBuilder : MonoBehaviour
             lineText,
             lineTextTranslated);
         newText.transform.SetSiblingIndex(textArea.transform.childCount - 2);
-
-        StartCoroutine(ScrollBottom()); // once text has been added, set scroll to the bottom of the text area
-    }
-
-    // once text has added, scroll to bottom of text area 
-    IEnumerator ScrollBottom()
-    {
-        yield return new WaitForEndOfFrame();
-        Canvas.ForceUpdateCanvases();
-        GameObject.FindGameObjectWithTag(StringLiterals.ScrollAreaTag)
-            .GetComponent<ScrollRect>()
-            .verticalNormalizedPosition = 0;
     }
     
-
-    // once text has added, scroll to bottom of text area, used in the dialogue runner
+    // this method is run from the DialogueInterface to scroll to the bottom of dialogue box
+    // when new lines are inserted, this prevents the continue and option buttons visible being
+    // partially hidden when adding content to the dialogue box
     public void ScrollToBottom()
     {
+        StartCoroutine(ScrollBottom());
+    }
+ 
+    IEnumerator ScrollBottom()
+    {
+        // it might be have something to do with the execution Yarn does
+        // but I have to delay this by three frames to ensure this happens
+        // after everything has been inserted into the dialogue box
+        yield return new WaitForSeconds(Time.deltaTime * 2);
         Canvas.ForceUpdateCanvases();
-        scrollRect.verticalNormalizedPosition = 0;
+        scrollRect
+            .GetComponent<ScrollRect>()
+            .verticalNormalizedPosition = 0;
     }
 
     // when starting conversation, clear the previous conversation text

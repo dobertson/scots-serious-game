@@ -1,0 +1,44 @@
+id,text,file,node,lineNumber
+line:0dc510b,"George@Hullo, a'm George, sorry fur the wait, ma meeting ran iver. Gin ye'd like tae tak a seat wi kin get sterted.",Joab_Interviewer,Joab.Hello,4
+line:07cb59c,"George@Seo wi received yer aipplication an ye tick aw the boaxes, in terms o qualifications.",Joab_Interviewer,Joab.Interview,10
+line:0b6261b,"George@Wi wanted tae bring ye in tae hae a blether, tawk aboot the joab, and lairn a bit aboot ye.",Joab_Interviewer,Joab.Interview,11
+line:02bcf14,George@Hoo dies that soond?,Joab_Interviewer,Joab.Interview,12
+line:0453256,"Aye, soonds guid.",Joab_Interviewer,Joab.Interview,13
+line:0266591,"Yeah, sounds good.",Joab_Interviewer,Joab.Interview,16
+line:08ac4ca,George@Okay.,Joab_Interviewer,Joab.Interview,15
+line:08e32b4,George@Great.,Joab_Interviewer,Joab.Interview,17
+line:0ab2070,"George@CompanyName haes a roarie history, iz a've nae doot yer aware o! Wance a wee, humble shoe shoap in Glesga, this company has built an empire in selling shoes aroon the warld.",Joab_Interviewer,Joab.Interview,18
+line:041bdc0,"George@A am prood tae wark here, gin ye end up warking here a howp ye dae tae.",Joab_Interviewer,Joab.Interview,19
+line:0d797dd,A howp sae tae!,Joab_Interviewer,Joab.Interview,20
+line:0d883b2,I hope so too!,Joab_Interviewer,Joab.Interview,22
+line:0c0d648,George@Ur ye fa Glesga?,Joab_Interviewer,Joab.Interview,23
+line:00c0e49,"A stay here, bit a'm fae Kilmaurnock.",Joab_Interviewer,Joab.Interview,24
+line:0ef8889,"I live here, but I'm from Kilmarnock.",Joab_Interviewer,Joab.Interview,26
+line:08330a2,"George@Ha! ""Say aye to a killie pie""!",Joab_Interviewer,Joab.Interview,27
+line:0969945,George@It's a guid slogan.,Joab_Interviewer,Joab.Interview,28
+line:07121a5,George@Niver tried wan masel.,Joab_Interviewer,Joab.Interview,29
+line:06705b6,"George@Iz fur the joab itsel, wis there onie questions ye hud? Dae ye want uz tae gi iver the details?",Joab_Interviewer,Joab.Interview,30
+line:0e744dd,Aye,Joab_Interviewer,Joab.Interview,31
+line:0850192,Yeah,Joab_Interviewer,Joab.Interview,32
+line:0e808ab,"George@Folk hink success in business iz innovation, mairket dominance, labour mairket flexibility, yada yada yada.",Joab_Interviewer,Joab.Interview,33
+line:0748e99,George@An there's trith tae at.,Joab_Interviewer,Joab.Interview,34
+line:06b38e5,George@Bit.,Joab_Interviewer,Joab.Interview,35
+line:0ccd8d9,George@A successful business is naehing withoot an airmy o accoontants. Ahin the scenes we ur the glue thit hauds it aw the gither.,Joab_Interviewer,Joab.Interview,36
+line:0a4a589,George@Whit iz business gin no money management?,Joab_Interviewer,Joab.Interview,37
+line:03fa7cf,"Aw aye, am a hunner percent wae ye.",Joab_Interviewer,Joab.Interview,38
+line:0ebdac4,"Oh yeah, i'm one hundred percent with you.",Joab_Interviewer,Joab.Interview,40
+line:0254f19,George@Guid! A'm gled tae hear it.,Joab_Interviewer,Joab.Interview,41
+line:024c236,George@Kin ye believe folk caw this joab borin?,Joab_Interviewer,Joab.Interview,42
+line:0a4f3e3,Folk haver.,Joab_Interviewer,Joab.Interview,43
+line:0654eed,People talk nonsense.,Joab_Interviewer,Joab.Interview,45
+line:0ea7aee,George@At they dae.,Joab_Interviewer,Joab.Interview,46
+line:0678281,"George@Right weel, it's been a pleasure, a'm sorry bit a've goat anither meetin in five meenits.",Joab_Interviewer,Joab.Interview,47
+line:036cf93,George@A'm sorry thit we dinnae hae mair time.,Joab_Interviewer,Joab.Interview,48
+line:059af6f,George@We'll bi in touch.,Joab_Interviewer,Joab.Interview,49
+line:02accb0,"Cheers, see ye later.",Joab_Interviewer,Joab.Interview,50
+line:0963b72,"Cheers, goodbye.",Joab_Interviewer,Joab.Interview,51
+line:0cbc815,"Janet@Hi Glen, it's Janet fae reception, a'm phonin aboot the interview ye hud wi CompanyName earlier.",Joab_Interviewer,Joab.Result,57
+line:0ed53ff,Janet@A'm sorry tae say thit we've went wae somewan else.,Joab_Interviewer,Joab.Result,59
+line:03c8ab2,"Janet@George wis sayin he gie enjoayed talkin wi ye, bit he didnae hink ye wir quite the richt fit.",Joab_Interviewer,Joab.Result,60
+line:0ccef9a,Janet@Best o luck! See ye.,Joab_Interviewer,Joab.Result,61
+line:016715b,"Janet@George wiz gie impressed wi ye, we'd like tae offer ye the joab.",Joab_Interviewer,Joab.Result,63

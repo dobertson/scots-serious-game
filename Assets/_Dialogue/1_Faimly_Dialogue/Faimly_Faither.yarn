@@ -4,16 +4,16 @@ position: 153.2168960571289,122.74763202667236
 ---
 <<if visited("Faither") is false>>
     Faither@Mornin son. #line:0fe03d5
-		-> Mornin da #line:06310bb
+		-> Mornin da. #line:06310bb
     Faither@The day's the day ye stert the scuil, intit? #line:0bc8847
-		-> Aye #line:07dee60
+		-> Aye. #line:07dee60
     Faither@A mind ma time et the scuil, yaised tae get intae rammies aw the time.  #line:0726f17
     Faither@Yer no the biggest wean son, yer a wee skinny malink.  #line:0b83faf
-    Faither@If wa o thae boays sterts et ye, ye hiv tae hit thaim back.  #line:03c89ee
+    Faither@If wan o thae boays sterts et ye, ye hiv tae hit thaim back.  #line:03c89ee
     Faither@Ye'll come oot it sair, bit ye cannae let folk walk ower ye.  #line:07689ec
     Faither@Mind at, n ye'll be awricht. #line:015f7d7
 		-> ... #line:0ad44d8
-    Faither@Wull we head aff? #line:0554ac8
+    Faither@Right, wull we head aff? #line:0554ac8
     Faither@... #line:08fd786
     Faither@Hiv ye seen ma bunnet onie whaur? #line:050a374
     Faither@Help me <playerInstruction>fin ma bunnet</playerInstruction> an we kin lea. #line:07d8413
@@ -28,10 +28,10 @@ position: 153.2168960571289,122.74763202667236
 
 <<if $held_item eq "bunnet">>
 	<<wearBunnet Faither>>
-    Faither@Ye've fun it, guid stuff. Ta son.  #line:0efed13
-	Faither@Right, let's get move. #line:0324a2f
+    Faither@Ye've fun it! Guid stuff, ta son.  #line:0efed13
+	  Faither@Right, let's get ye tae the scuil. #line:0324a2f
 	<<endScene Faither>>
+<<else>>
+	Faither@Ye cannae lea withoot yer bunnet! #line:0ea3d16
 <<endif>>
-
-Faither@Ye cannae lea withoot yer bunnet! #line:0ea3d16
 ===
