@@ -10,7 +10,16 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-GB
   stringIDs:
-  - line:06e428d
+  - line:0070ec4
+  - line:0af03da
+  - line:0e410d8
+  - line:0e7c503
+  - line:02d64a3
+  - line:0d3b094
+  - line:0af0de2
+  - line:0a667e8
+  - line:0fba93e
+  - line:040ee00
   compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
@@ -18,4 +27,4 @@ ScriptedImporter:
     type: 3}
   localizations:
   - languageName: gd
-    text: {fileID: 4900000, guid: 17afd5732484f904980d1973b6d5f29d, type: 3}
+    text: {fileID: 4900000, guid: a47947be6a15f2c4ab9ae877124fe87d, type: 3}

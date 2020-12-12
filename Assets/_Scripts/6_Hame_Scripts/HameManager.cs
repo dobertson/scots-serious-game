@@ -15,7 +15,7 @@ public class HameManager : MonoBehaviour
     private SceneTransitionManager sceneTransitionManager;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         endingTextContainer.SetActive(false);
         hameText.SetActive(false);

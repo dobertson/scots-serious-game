@@ -9,7 +9,7 @@ public class OpenHameDoor : MonoBehaviour
     private InteractableDescription interactableDescription;
     private SoundManager soundManager;
 
-    private void Awake()
+    private void Start()
     {
         // interactable only if on final game state
         if(GameManager.Instance.gameState != GameState.HAME)

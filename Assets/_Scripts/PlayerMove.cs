@@ -64,7 +64,8 @@ public class PlayerMove : MonoBehaviour
         Vector3 forwardMovement = transform.forward * vertInput;
         Vector3 rightMovement = transform.right * horizInput;
 
-        SprintKey();
+        //disable sprinting
+        //SprintKey();
 
         if (isSprinting)
         {

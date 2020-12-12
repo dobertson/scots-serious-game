@@ -43,7 +43,12 @@ public class NPC : MonoBehaviour
     private DialogueRunner dialogueRunner;
     private DialogueTranslated dialogueTranslated;
 
-    void Start () {
+    private void Start()
+    {
+        
+    }
+
+    void Awake () {
         if (scriptToLoad != null) {
             // add script to dialgoue runner
             dialogueRunner = FindObjectOfType<DialogueRunner>();
@@ -52,7 +57,7 @@ public class NPC : MonoBehaviour
             // add translated script to dialgue 
             dialogueTranslated = FindObjectOfType<DialogueTranslated>();
             dialogueTranslated.Add(scriptToLoad.localizations[0].text);
-            }
+        }
     }
 
     private void OnMouseDown()

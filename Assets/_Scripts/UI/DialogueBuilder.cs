@@ -47,7 +47,7 @@ public class DialogueBuilder : MonoBehaviour
     IEnumerator ScrollBottom()
     {
         // it might be have something to do with the execution Yarn does
-        // but I have to delay this by three frames to ensure this happens
+        // but I have to delay this by two frames to ensure this happens
         // after everything has been inserted into the dialogue box
         yield return new WaitForSeconds(Time.deltaTime * 2);
         Canvas.ForceUpdateCanvases();

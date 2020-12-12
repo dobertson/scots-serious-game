@@ -69,6 +69,12 @@ public class LoadNarrativeScene : MonoBehaviour
             GetComponent<Collider>().enabled = true;
         }
 
+        // hame is not a memory, so change wording
+        if (openOnState == GameState.HAME)
+        {
+            description = "Go hame/home?";
+        }
+
     }
 
     private void Update()

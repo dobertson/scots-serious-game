@@ -46,7 +46,11 @@ public class DialogueLine : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     // if player hovers mouse over text, show the translation
     public void OnPointerEnter(PointerEventData eventData)
     {
-        ShowTranslation();
+        // no translations in last scene
+        if(GameManager.Instance.gameState != GameState.HAME)
+        {
+            ShowTranslation();
+        }
     }
 
     // if player is not hovering over it, hide the translation

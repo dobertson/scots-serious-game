@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerLook playerLook;
     private PlayerMove playerMove;
-    void Start()
+
+    void Awake()
     {
         // hide cursor when moving
         Cursor.visible = false;

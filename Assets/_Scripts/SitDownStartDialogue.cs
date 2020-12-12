@@ -20,10 +20,15 @@ public class SitDownStartDialogue : MonoBehaviour
     private void Start()
     {
         setPositionsInPlayMode = false; //ensure this is always false, and can only be set true in inspector
+        Debug.Log("11111");
         playerMove = FindObjectOfType<PlayerMove>();
+        Debug.Log("222222");
         playerLook = FindObjectOfType<PlayerLook>();
+        Debug.Log("33333");
         playerController = FindObjectOfType<PlayerController>();
+        Debug.Log("44444");
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+        Debug.Log("555555");
     }
 
     void OnMouseDown()

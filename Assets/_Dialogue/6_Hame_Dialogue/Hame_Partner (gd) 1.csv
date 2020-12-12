@@ -1,0 +1,11 @@
+id,text,file,node,lineNumber
+line:0070ec4,Wife: Hullo. (((NEW LINE))),Hame_Partner,Wife,4
+line:0af03da,Wife: Hello (((NEW LINE))),Hame_Partner,Wife,5
+line:0e410d8,Wife@Hullo (((NEW LINE))),Hame_Partner,Wife.2Scots,11
+line:0e7c503,Glen: It's guid tae be hame. (((NEW LINE))),Hame_Partner,Wife.2Scots,12
+line:02d64a3,Glen: It's good to be home (((NEW LINE))),Hame_Partner,Wife.2Scots,13
+line:0d3b094,Wife@Hello (((NEW LINE))),Hame_Partner,Wife.2English,18
+line:0af0de2,Glen: It's guid tae be hame. (((NEW LINE))),Hame_Partner,Wife.2English,19
+line:0a667e8,Glen: It's good to be home (((NEW LINE))),Hame_Partner,Wife.2English,20
+line:0fba93e,Glen@It's guid tae be hame. (((NEW LINE))),Hame_Partner,Wife.3Scots,26
+line:040ee00,Glen@It's good to be home. (((NEW LINE))),Hame_Partner,Wife.3English,33

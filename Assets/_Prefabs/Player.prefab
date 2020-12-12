@@ -257,7 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseXInputName: Mouse X
   mouseYInputName: Mouse Y
-  mouseSensitivity: 150
+  mouseSensitivity: 75
   playerBody: {fileID: 9104567996000036930}
 --- !u!1 &9104567996000036929
 GameObject:
@@ -329,8 +329,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInputName: Horizontal
   verticalInputName: Vertical
-  walkingSpeed: 2
-  sprintSpeed: 5
+  walkingSpeed: 3
+  sprintSpeed: 2
   slopeForce: 3
   slopeForceRayLength: 1.5
   jumpFallOff:
